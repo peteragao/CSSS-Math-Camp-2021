@@ -1,37 +1,22 @@
-## Welcome to GitHub Pages
+---
+title: Welcome to Math Camp!
+layout: default
+---
 
-You can use the [editor on GitHub](https://github.com/peteragao/CSSS-Math-Camp-2021/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
+## Welcome to Math Camp!
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+Historically, Math Camp has been a 5-day review course covering algebra, matrix algebra, calculus, and probability. This year, lectures will be uploaded before the week of Math Camp. Lectures are intended to be watched outside of synchronous class time. During our synchronous Zoom meetings, we will discuss topics from lectures, address questions, and work through examples together and in small groups. The programming language R will be introduced in synchronous afternoon labs, where we will work through examples together over Zoom (no preparation is necessary for lab).
 
-### Markdown
+  **Instructor:** Peter Gao, Graduate Student, Dept. of Statistics  
+  **TA:** Jessica Kunke, Graduate Student, Dept. of Statistics    
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+## Schedule
 
-```markdown
-Syntax highlighted code block
+The daily schedule may vary as we adapt to an online version of Math Camp, but the tentative synchronous learning schedule is as follows:  
 
-# Header 1
-## Header 2
-### Header 3
+  **10:00am-10:45am**  Review lectures and practice problems (First day, introduction)  
+  **10:45am-11:30am**  Breakout Rooms: Practice problems  
+  **1:30pm-3:00pm**    R labs  
+  **3:00pm-4:00pm**    Additional problem session/office hours (if needed)  
 
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
-```
-
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/peteragao/CSSS-Math-Camp-2021/settings/pages). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://support.github.com/contact) and we’ll help you sort it out.
+Slides and materials will be linked to in the schedule below as they are made available.
