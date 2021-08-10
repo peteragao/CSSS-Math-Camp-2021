@@ -19,10 +19,44 @@ The daily schedule may vary as we adapt to an online version of Math Camp, but t
   **1:30pm-3:00pm**    R labs  
   **3:00pm-4:00pm**    Additional problem session/office hours (if needed)  
 
-Slides and materials will be linked to in the schedule below as they are made available. The materials provided here have been largely created by previous CSSS Math Camp instructors, including [Jessica Godwin](https://jlgodwin.github.io/MathCamp)
+Slides and materials will be linked to in the schedule below as they are made available. The materials provided here have been largely created by previous CSSS Math Camp instructors, including [Jessica Godwin](https://jlgodwin.github.io/MathCamp).
 
 ## Monday
 **Lecture**
  * Algebra, Functions, Limits
  * Slides to come \| [Problem Set](https://peteragao.github.io/CSSS-Math-Camp-2021/ProblemSets/problemset1.pdf) \| [Solutions](https://peteragao.github.io//CSSS-Math-Camp-2021/ProblemSets/solutions1.pdf)
  
+**Lab**
+ * Intro to R, Rstudio, and R Markdown
+ * R as a calculator
+
+## Tuesday
+**Lecture**
+ * Matrix Algebra
+ * Differential calculus
+ 
+**Lab**
+* Matrices & Dataframes in R, Data I/O, Data manipulation
+
+## Wednesday
+**Lecture**
+* Introduction to probability
+* Integral Calculus
+
+**Lab**
+* Sampling from an urn
+* Plotting basics 
+
+## Thursday
+**Lecture**
+ * Random variables, densities, moments
+ * Discrete distributions
+ * Continuous distributions 
+ 
+**Lab**
+ * Probability distributions
+ * Sampling
+ 
+## Friday
+**Lecture**
+ * Maximum likelihood estimation
