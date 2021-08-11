@@ -33,7 +33,9 @@ Slides and materials will be linked to in the schedule below as they are made av
 ## Tuesday
 **Lecture**
  * Matrix Algebra
+ * Slides to come \| [Problem Set](https://peteragao.github.io/CSSS-Math-Camp-2021/ProblemSets/problemset2.pdf) \| [Solutions](https://peteragao.github.io//CSSS-Math-Camp-2021/ProblemSets/solutions2.pdf)
  * Differential calculus
+ * Slides to come \| [Problem Set](https://peteragao.github.io/CSSS-Math-Camp-2021/ProblemSets/problemset3.pdf) \| [Solutions](https://peteragao.github.io//CSSS-Math-Camp-2021/ProblemSets/solutions3.pdf)
  
 **Lab**
 * Matrices & Dataframes in R, Data I/O, Data manipulation
@@ -41,7 +43,9 @@ Slides and materials will be linked to in the schedule below as they are made av
 ## Wednesday
 **Lecture**
 * Introduction to probability
+* Slides to come \| [Problem Set](https://peteragao.github.io/CSSS-Math-Camp-2021/ProblemSets/problemset4.pdf) \| [Solutions](https://peteragao.github.io//CSSS-Math-Camp-2021/ProblemSets/solutions4.pdf)
 * Integral Calculus
+* Slides to come \| [Problem Set](https://peteragao.github.io/CSSS-Math-Camp-2021/ProblemSets/problemset5.pdf) \| [Solutions](https://peteragao.github.io//CSSS-Math-Camp-2021/ProblemSets/solutions5.pdf)
 
 **Lab**
 * Sampling from an urn
@@ -50,8 +54,11 @@ Slides and materials will be linked to in the schedule below as they are made av
 ## Thursday
 **Lecture**
  * Random variables, densities, moments
+ * Slides to come \| [Problem Set](https://peteragao.github.io/CSSS-Math-Camp-2021/ProblemSets/problemset6.pdf) \| [Solutions](https://peteragao.github.io//CSSS-Math-Camp-2021/ProblemSets/solutions6.pdf)
  * Discrete distributions
- * Continuous distributions 
+ * Slides to come \| [Problem Set](https://peteragao.github.io/CSSS-Math-Camp-2021/ProblemSets/problemset7.pdf) \| [Solutions](https://peteragao.github.io//CSSS-Math-Camp-2021/ProblemSets/solutions7.pdf)
+ * Continuous distributions
+ * Slides to come \| [Problem Set](https://peteragao.github.io/CSSS-Math-Camp-2021/ProblemSets/problemset8.pdf) \| [Solutions](https://peteragao.github.io//CSSS-Math-Camp-2021/ProblemSets/solutions8.pdf)
  
 **Lab**
  * Probability distributions
