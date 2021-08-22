@@ -24,7 +24,12 @@ Slides and materials will be linked to in the schedule below as they are made av
 ## Monday
 **Lecture**
  * Algebra, Functions, Limits
- * Slides to come \| [Problem Set](https://peteragao.github.io/CSSS-Math-Camp-2021/ProblemSets/problemset1.pdf) \| [Solutions](https://peteragao.github.io//CSSS-Math-Camp-2021/ProblemSets/solutions1.pdf)
+ * [Slides](https://peteragao.github.io/CSSS-Math-Camp-2021/Lectures/Lecture1.pdf)  \| [Problem Set](https://peteragao.github.io/CSSS-Math-Camp-2021/ProblemSets/problemset1.pdf) \| [Solutions](https://peteragao.github.io//CSSS-Math-Camp-2021/ProblemSets/solutions1.pdf)
+    * [Lecture Video: Notation](https://washington.zoom.us/rec/share/Bqa2q0OmzvZqMV4aN69MHanV9ndHDNkc46px8DLy3fsa-RbpNspZJcQwQGXNdGcB.K44wcyN-a2unFSjB?startTime=1629342082000)
+    * [Lecture Video: Linear functions](https://washington.zoom.us/rec/share/Oyozh9VfhBtbblLp8pFdpSx9uHDE2gl6ouS6vETUCpg_BViZUplweINXQTX21rsQ.Uv08jLiJ-l9TzDEA?startTime=1629428390000)
+    * [Lecture Video: Quadratic functions](https://washington.zoom.us/rec/share/2KfHU6LRBiy6oTS-13nUYNCKPcNJeUS7w473EXVZERxzpDfV8grSZMUahCLvo3QZ.nktLwW07sxPu9qAY?startTime=1629566904000)
+    * [Lecture Video: Exponents/Logarithms](https://washington.zoom.us/rec/share/2KfHU6LRBiy6oTS-13nUYNCKPcNJeUS7w473EXVZERxzpDfV8grSZMUahCLvo3QZ.nktLwW07sxPu9qAY?startTime=1629568450000)
+    * [Lecture Video: Limits](https://washington.zoom.us/rec/share/2KfHU6LRBiy6oTS-13nUYNCKPcNJeUS7w473EXVZERxzpDfV8grSZMUahCLvo3QZ.nktLwW07sxPu9qAY?startTime=1629570847000)
  
 **Lab**
  * Intro to R, Rstudio, and R Markdown
