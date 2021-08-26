@@ -39,12 +39,15 @@ Slides and materials will be linked to in the schedule below as they are made av
 **Lecture**
  * Matrix Algebra
  * [Slides](https://peteragao.github.io/CSSS-Math-Camp-2021/Lectures/Lecture2.pdf)  \| [Problem Set](https://peteragao.github.io/CSSS-Math-Camp-2021/ProblemSets/problemset2.pdf) \| [Solutions](https://peteragao.github.io//CSSS-Math-Camp-2021/ProblemSets/solutions2.pdf)
-     * [Lecture Video: Matrix algebra notation](https://washington.zoom.us/rec/share/PT7hHLadLzZMfgZxGNkcfMESA3l3yuMmugyiX9Y0sXbipsxwTosn8Uv-tcUI0czf.mxEtJLDv4s4OkOyO?startTime=1629921905000)
+    * [Lecture Video: Matrix algebra notation](https://washington.zoom.us/rec/share/PT7hHLadLzZMfgZxGNkcfMESA3l3yuMmugyiX9Y0sXbipsxwTosn8Uv-tcUI0czf.mxEtJLDv4s4OkOyO?startTime=1629921905000)
     * [Lecture Video: Matrix operations](https://washington.zoom.us/rec/share/PT7hHLadLzZMfgZxGNkcfMESA3l3yuMmugyiX9Y0sXbipsxwTosn8Uv-tcUI0czf.mxEtJLDv4s4OkOyO?startTime=1629923203000)
     * [Lecture Video: Least squares](https://washington.zoom.us/rec/share/xjQPIgeQ9c2OBy3fzSvFY5XYAF22D8hmzJzvw4Sp5TUBSBMgwKVX5-FJb4LB1OUb.SG5606hDSDJt77e_?startTime=1629932017000)
     * [Lecture Video: Least squares continued](https://uw.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=8a347ff8-fdd2-4a73-8845-ad8f01845940)
  * Differential calculus
- * Slides to come \| [Problem Set](https://peteragao.github.io/CSSS-Math-Camp-2021/ProblemSets/problemset3.pdf) \| [Solutions](https://peteragao.github.io//CSSS-Math-Camp-2021/ProblemSets/solutions3.pdf)
+ * [Slides](https://peteragao.github.io/CSSS-Math-Camp-2021/Lectures/Lecture3.pdf) \| [Problem Set](https://peteragao.github.io/CSSS-Math-Camp-2021/ProblemSets/problemset3.pdf) \| [Solutions](https://peteragao.github.io//CSSS-Math-Camp-2021/ProblemSets/solutions3.pdf)
+     * [Lecture Video: Intro to Derivatives](https://washington.zoom.us/rec/share/u_BYWF5whBlM-V1-6owoZgncXk_6YDDm9xvPSSOMPv7g90bSD5D0j0H-O5C7zJTM.BnKrPiC6wUiv88gb?startTime=1630014344000)
+    * [Lecture Video: Rules for differentiation](https://washington.zoom.us/rec/share/u_BYWF5whBlM-V1-6owoZgncXk_6YDDm9xvPSSOMPv7g90bSD5D0j0H-O5C7zJTM.BnKrPiC6wUiv88gb?startTime=1630015929000)
+    * [Lecture Video: Critical Values](https://washington.zoom.us/rec/share/u_BYWF5whBlM-V1-6owoZgncXk_6YDDm9xvPSSOMPv7g90bSD5D0j0H-O5C7zJTM.BnKrPiC6wUiv88gb?startTime=1630017267000)
  
 **Lab**
 * Matrices & Dataframes in R, Data I/O, Data manipulation
