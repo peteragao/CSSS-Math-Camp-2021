@@ -38,7 +38,11 @@ Slides and materials will be linked to in the schedule below as they are made av
 ## Tuesday
 **Lecture**
  * Matrix Algebra
- * Slides to come \| [Problem Set](https://peteragao.github.io/CSSS-Math-Camp-2021/ProblemSets/problemset2.pdf) \| [Solutions](https://peteragao.github.io//CSSS-Math-Camp-2021/ProblemSets/solutions2.pdf)
+ * [Slides](https://peteragao.github.io/CSSS-Math-Camp-2021/Lectures/Lectur21.pdf)  \| [Problem Set](https://peteragao.github.io/CSSS-Math-Camp-2021/ProblemSets/problemset2.pdf) \| [Solutions](https://peteragao.github.io//CSSS-Math-Camp-2021/ProblemSets/solutions2.pdf)
+     * [Lecture Video: Matrix algebra notation](https://washington.zoom.us/rec/share/PT7hHLadLzZMfgZxGNkcfMESA3l3yuMmugyiX9Y0sXbipsxwTosn8Uv-tcUI0czf.mxEtJLDv4s4OkOyO?startTime=1629921905000)
+    * [Lecture Video: Matrix operations](https://washington.zoom.us/rec/share/PT7hHLadLzZMfgZxGNkcfMESA3l3yuMmugyiX9Y0sXbipsxwTosn8Uv-tcUI0czf.mxEtJLDv4s4OkOyO?startTime=1629923203000)
+    * [Lecture Video: Least squares](https://washington.zoom.us/rec/share/xjQPIgeQ9c2OBy3fzSvFY5XYAF22D8hmzJzvw4Sp5TUBSBMgwKVX5-FJb4LB1OUb.SG5606hDSDJt77e_?startTime=1629932017000)
+    * [Lecture Video: Least squares continued](https://uw.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=8a347ff8-fdd2-4a73-8845-ad8f01845940)
  * Differential calculus
  * Slides to come \| [Problem Set](https://peteragao.github.io/CSSS-Math-Camp-2021/ProblemSets/problemset3.pdf) \| [Solutions](https://peteragao.github.io//CSSS-Math-Camp-2021/ProblemSets/solutions3.pdf)
  
