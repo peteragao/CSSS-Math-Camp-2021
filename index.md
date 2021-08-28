@@ -54,10 +54,13 @@ Slides and materials will be linked to in the schedule below as they are made av
 
 ## Wednesday
 **Lecture**
-* Introduction to probability
-* Slides to come \| [Problem Set](https://peteragao.github.io/CSSS-Math-Camp-2021/ProblemSets/problemset4.pdf) \| [Solutions](https://peteragao.github.io//CSSS-Math-Camp-2021/ProblemSets/solutions4.pdf)
 * Integral Calculus
+* [Slides](https://peteragao.github.io/CSSS-Math-Camp-2021/Lectures/Lecture4.pdf)  \| [Problem Set](https://peteragao.github.io/CSSS-Math-Camp-2021/ProblemSets/problemset4.pdf) \| [Solutions](https://peteragao.github.io//CSSS-Math-Camp-2021/ProblemSets/solutions4.pdf)
+    * [Lecture Video: Introduction to Integrals](https://washington.zoom.us/rec/share/Hro-6N5l4fIyrjx7aZVFZwxzfTx8GEOUvdlC2RILoyqumyMLQ-OpWDMQYIPV2mZP.2-6iT1zbdWSNMz53?startTime=1630090996000)
+    * [Lecture Video: Rules for integration](https://washington.zoom.us/rec/share/Hro-6N5l4fIyrjx7aZVFZwxzfTx8GEOUvdlC2RILoyqumyMLQ-OpWDMQYIPV2mZP.2-6iT1zbdWSNMz53?startTime=1630092654000)
+* Introduction to probability
 * Slides to come \| [Problem Set](https://peteragao.github.io/CSSS-Math-Camp-2021/ProblemSets/problemset5.pdf) \| [Solutions](https://peteragao.github.io//CSSS-Math-Camp-2021/ProblemSets/solutions5.pdf)
+
 
 **Lab**
 * Sampling from an urn
