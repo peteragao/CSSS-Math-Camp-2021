@@ -59,7 +59,11 @@ Slides and materials will be linked to in the schedule below as they are made av
     * [Lecture Video: Introduction to Integrals](https://washington.zoom.us/rec/share/Hro-6N5l4fIyrjx7aZVFZwxzfTx8GEOUvdlC2RILoyqumyMLQ-OpWDMQYIPV2mZP.2-6iT1zbdWSNMz53?startTime=1630090996000)
     * [Lecture Video: Rules for integration](https://washington.zoom.us/rec/share/Hro-6N5l4fIyrjx7aZVFZwxzfTx8GEOUvdlC2RILoyqumyMLQ-OpWDMQYIPV2mZP.2-6iT1zbdWSNMz53?startTime=1630092654000)
 * Introduction to probability
-* Slides to come \| [Problem Set](https://peteragao.github.io/CSSS-Math-Camp-2021/ProblemSets/problemset5.pdf) \| [Solutions](https://peteragao.github.io//CSSS-Math-Camp-2021/ProblemSets/solutions5.pdf)
+* [Slides](https://peteragao.github.io/CSSS-Math-Camp-2021/Lectures/Lecture5.pdf) \| [Problem Set](https://peteragao.github.io/CSSS-Math-Camp-2021/ProblemSets/problemset5.pdf) \| [Solutions](https://peteragao.github.io//CSSS-Math-Camp-2021/ProblemSets/solutions5.pdf)
+    * [Lecture Video: Introduction to Probability I ](https://washington.zoom.us/rec/share/0YQ4UG9aVlbzCMQeyEze_1JW9seneQSwpQElPkPnd1SacECkawqeu0PeA4glaNGY.hJUPiCMgu6-1Qawz?startTime=1630356226000)
+    * [Lecture Video:  Introduction to Probability II](https://washington.zoom.us/rec/share/0YQ4UG9aVlbzCMQeyEze_1JW9seneQSwpQElPkPnd1SacECkawqeu0PeA4glaNGY.hJUPiCMgu6-1Qawz?startTime=1630357735000)
+    * [Lecture Video:  Relative Risk](https://washington.zoom.us/rec/share/0YQ4UG9aVlbzCMQeyEze_1JW9seneQSwpQElPkPnd1SacECkawqeu0PeA4glaNGY.hJUPiCMgu6-1Qawz?startTime=1630359226000)
+
 
 
 **Lab**
