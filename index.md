@@ -73,7 +73,10 @@ Slides and materials will be linked to in the schedule below as they are made av
 ## Thursday
 **Lecture**
  * Random variables, densities, moments
- * Slides to come \| [Problem Set](https://peteragao.github.io/CSSS-Math-Camp-2021/ProblemSets/problemset6.pdf) \| [Solutions](https://peteragao.github.io//CSSS-Math-Camp-2021/ProblemSets/solutions6.pdf)
+ * [Slides](https://peteragao.github.io/CSSS-Math-Camp-2021/Lectures/Lecture6.pdf) \| [Problem Set](https://peteragao.github.io/CSSS-Math-Camp-2021/ProblemSets/problemset6.pdf) \| [Solutions](https://peteragao.github.io//CSSS-Math-Camp-2021/ProblemSets/solutions6.pdf)
+   * [Lecture Video: Introduction to Random Variables ](https://washington.zoom.us/rec/share/z1_eyegYcCr1-kzXOsuaHmKxv0nW4lKQbI__RrH00eZa-eXx3XZ0zYMRDUTLeII.THjG5y_zaesfVuqO?startTime=1630447488000)
+    * [Lecture Video:  Properties of Random Variables](https://washington.zoom.us/rec/share/z1_eyegYcCr1-kzXOsuaHmKxv0nW4lKQbI__RrH00eZa-eXx3XZ0zYMRDUTLeII.THjG5y_zaesfVuqO?startTime=1630448627000)
+    * [Lecture Video:  Discrete vs. Continuous Random Variables](https://washington.zoom.us/rec/share/z1_eyegYcCr1-kzXOsuaHmKxv0nW4lKQbI__RrH00eZa-eXx3XZ0zYMRDUTLeII.THjG5y_zaesfVuqO?startTime=1630449685000)
  * Discrete distributions
  * Slides to come \| [Problem Set](https://peteragao.github.io/CSSS-Math-Camp-2021/ProblemSets/problemset7.pdf) \| [Solutions](https://peteragao.github.io//CSSS-Math-Camp-2021/ProblemSets/solutions7.pdf)
  * Continuous distributions
