@@ -78,10 +78,14 @@ Slides and materials will be linked to in the schedule below as they are made av
     * [Lecture Video:  Properties of Random Variables](https://washington.zoom.us/rec/share/z1_eyegYcCr1-kzXOsuaHmKxv0nW4lKQbI__RrH00eZa-eXx3XZ0zYMRDUTLeII.THjG5y_zaesfVuqO?startTime=1630448627000)
     * [Lecture Video:  Discrete vs. Continuous Random Variables](https://washington.zoom.us/rec/share/z1_eyegYcCr1-kzXOsuaHmKxv0nW4lKQbI__RrH00eZa-eXx3XZ0zYMRDUTLeII.THjG5y_zaesfVuqO?startTime=1630449685000)
  * Discrete distributions
- * Slides to come \| [Problem Set](https://peteragao.github.io/CSSS-Math-Camp-2021/ProblemSets/problemset7.pdf) \| [Solutions](https://peteragao.github.io//CSSS-Math-Camp-2021/ProblemSets/solutions7.pdf)
+ * [Slides](https://peteragao.github.io/CSSS-Math-Camp-2021/Lectures/Lecture7.pdf) \| [Problem Set](https://peteragao.github.io/CSSS-Math-Camp-2021/ProblemSets/problemset7.pdf) \| [Solutions](https://peteragao.github.io//CSSS-Math-Camp-2021/ProblemSets/solutions7.pdf)
+    * [Lecture Video: Bernoulli, Binomial, and Multinomial ](https://washington.zoom.us/rec/share/9bSaTOieXWv656W_mQLiClDRK22cS3reCb4aY75vVTog8jFMv-fvxNCDMRX2kcf2._i_5eLZojcqh1B1Z?startTime=1630522261000)
+    * [Lecture Video:  Geometric, Hypergeometric, and Poisson](https://washington.zoom.us/rec/share/9bSaTOieXWv656W_mQLiClDRK22cS3reCb4aY75vVTog8jFMv-fvxNCDMRX2kcf2._i_5eLZojcqh1B1Z?startTime=1630525529000)
  * Continuous distributions
- * Slides to come \| [Problem Set](https://peteragao.github.io/CSSS-Math-Camp-2021/ProblemSets/problemset8.pdf) \| [Solutions](https://peteragao.github.io//CSSS-Math-Camp-2021/ProblemSets/solutions8.pdf)
- 
+ * [Slides](https://peteragao.github.io/CSSS-Math-Camp-2021/Lectures/Lecture8.pdf) \| [Problem Set](https://peteragao.github.io/CSSS-Math-Camp-2021/ProblemSets/problemset8.pdf) \| [Solutions](https://peteragao.github.io//CSSS-Math-Camp-2021/ProblemSets/solutions8.pdf)
+    * [Lecture Video: Uniform and Gaussian ](https://washington.zoom.us/rec/share/F323cE5sUkjbs7u1J3cXwCRklwj-VNKWZGRXwzVVPN8COYial8jTdZGvpC9DLS6S.bKdZJR08JL6LohV0?startTime=1630531304000)
+    * [Lecture Video:  Chi Squared and Exponential](https://washington.zoom.us/rec/share/F323cE5sUkjbs7u1J3cXwCRklwj-VNKWZGRXwzVVPN8COYial8jTdZGvpC9DLS6S.bKdZJR08JL6LohV0?startTime=1630532327000)
+    
 **Lab**
  * Probability distributions
  * Sampling
