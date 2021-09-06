@@ -34,7 +34,7 @@ Slides and materials will be linked to in the schedule below as they are made av
 **Lab**
  * Intro to R, Rstudio, and R Markdown
  * R as a calculator
- * [Lab](https://peteragao.github.io/MathCamp/Labs/Rlab1.html) \| [R Markdown](https://peteragao.github.io/MathCamp/Labs/Rlab1.Rmd) \| [R script](https://peteragao.github.io/MathCamp/Labs/Rlab1.R) 
+ * [Lab](https://peteragao.github.io/CSSS-Math-Camp-2021/Labs/Rlab1.html) \| [R Markdown](https://peteragao.github.io/CSSS-Math-Camp-2021/Labs/Rlab1.Rmd) \| [R script](https://peteragao.github.io/CSSS-Math-Camp-2021/Labs/Rlab1.R) 
 
 
 ## Tuesday
