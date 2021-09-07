@@ -93,7 +93,7 @@ Slides and materials will be linked to in the schedule below as they are made av
 **Lab**
  * Probability distributions
  * Sampling
- * [Lab](https://peteragao.github.io/CSSS-Math-Camp-2021/Labs/Rlab4.html) \| [R Markdown](https://peteragao.github.io/CSSS-Math-Camp-2021/Labs/Rlab4.Rmd) \| [Seattle_Pet_Licenses.csv](https://peteragao.github.io/CSSS-Math-Camp-2021/Labs/Seattle_Pet_Licenses.csv) \| [caffeine.csv](https://peteragao.github.io/CSSS-Math-Camp-2021/Labs/caffeine.csv) 
+
  
 ## Friday
 **Lecture**

@@ -219,11 +219,11 @@ In R Markdown, these formatting tools will create highlighted text.
 
 ### Math mode
 
-If you want to write equations you can use (`\$`) like in \LaTeX.
+If you want to write equations you can use (`$`) like in \LaTeX.
 
-Wrap an equation in a single `\$` to write an equation in "math mode": $y = x$.
+Wrap an equation in a single `$` to write an equation in "math mode": $y = x$.
 
-Wrap an equation in double dollar signs (`\$\$`) to make an equation block in math mode: $$ y = x $$.
+Wrap an equation in double dollar signs (`$$`) to make an equation block in math mode: $$ y = x $$.
 
 In a .pdf file you can also include raw \LaTeX code, and use and equation or align environment:
 
