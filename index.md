@@ -53,7 +53,8 @@ Slides and materials will be linked to in the schedule below as they are made av
  
 **Lab**
 * Matrices & Dataframes in R, Data I/O, Data manipulation
-
+ * [Lab](https://peteragao.github.io/CSSS-Math-Camp-2021/Labs/Rlab4.html) \| [R Markdown](https://peteragao.github.io/CSSS-Math-Camp-2021/Labs/Rlab4.Rmd) \| [Seattle_Pet_Licenses.csv](https://peteragao.github.io/CSSS-Math-Camp-2021/Labs/Seattle_Pet_Licenses.csv) \| [caffeine.csv](https://peteragao.github.io/CSSS-Math-Camp-2021/Labs/caffeine.csv) 
+ 
 ## Wednesday
 **Lecture**
 * Integral Calculus
@@ -71,6 +72,7 @@ Slides and materials will be linked to in the schedule below as they are made av
 **Lab**
 * Sampling from an urn
 * Plotting basics 
+* [Lab I](https://peteragao.github.io/CSSS-Math-Camp-2021/Labs/Rlab3.html) \| [R Markdown I](https://peteragao.github.io/CSSS-Math-Camp-2021/Labs/Rlab3.Rmd) \| [Lab II](https://peteragao.github.io/CSSS-Math-Camp-2021/Labs/Rlab4.html) \| [R Markdown II](https://peteragao.github.io/CSSS-Math-Camp-2021/Labs/Rlab4.Rmd)
 
 ## Thursday
 **Lecture**
@@ -91,6 +93,7 @@ Slides and materials will be linked to in the schedule below as they are made av
 **Lab**
  * Probability distributions
  * Sampling
+ * [Lab](https://peteragao.github.io/CSSS-Math-Camp-2021/Labs/Rlab4.html) \| [R Markdown](https://peteragao.github.io/CSSS-Math-Camp-2021/Labs/Rlab4.Rmd) \| [Seattle_Pet_Licenses.csv](https://peteragao.github.io/CSSS-Math-Camp-2021/Labs/Seattle_Pet_Licenses.csv) \| [caffeine.csv](https://peteragao.github.io/CSSS-Math-Camp-2021/Labs/caffeine.csv) 
  
 ## Friday
 **Lecture**

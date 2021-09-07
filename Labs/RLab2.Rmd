@@ -1,0 +1,576 @@
+---
+title: "Math Camp 2020: R Lab 2"
+author: ""
+date: "September 14, 2021"
+output: html_document
+---
+
+
+```{r setup, echo = FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+knitr::opts_knit$set(root.dir = '~/Dropbox/MathCamp/2021/Lab2')
+```
+
+# Vectors in `R`
+
+Vectors are a specific type of object (in the first lab we discussed object types of integer, numeric, character and logical) with dimension $n\times1$, e.g. a place to store $n$ observations of a single variable. Vector elements are indexed by positive integers.  Many mathematical functions in `R` are "vectorized", i.e. we can perform operations on every element of a vector at the same time (e.g. add 3 to each element of a vector.) Other functions can aggregate members of the vector (e.g. give the mean of the vector.)\
+
+### `rep()`
+
+We can create a vector with repeated numbers.
+```{r}
+help(rep)
+
+z <- rep(1,5)
+z
+
+q <- rep(c(1, 2), 5)
+q
+
+t <- rep(c(1,2), c(5, 5))
+t
+```
+
+### `seq()`
+We can create a vector with a sequence of numbers.
+```{r}
+help(seq)
+
+a <- 1:5
+a
+
+b <- seq(1,5)
+b
+
+c <- seq(5,1)
+c
+
+d <- seq(from=0, to=15, by=3)
+d
+
+e <- seq(0, 15, 3)
+e
+```
+
+
+### `c()`
+To create a vector with specific numbers or objects inside, we need to use the c() function:
+```{r, echo = T, eval = F}
+f <- (0, 5, 10)  #This doesn't work
+```
+```{r}
+f <- c(0, 5, 10) #This works!!!
+f
+```
+
+### `rnorm()`
+We can also create a vector from randomly generated numbers. Let's draw 10 random numbers drawn from the standard normal distribution (mean of 0, standard deviation of 1). Note: you can draw from any normal distribution of your choosing by changing the `mean=} and `sd=} arguments.
+```{r}
+g <- rnorm(10, mean=0, sd=1)
+g
+```
+
+Sometimes you will want to clear every object you've stored in your environment. This is done using the `rm()` function.
+
+```{r}
+rm(list=ls())
+```
+
+## Subsetting Vectors
+
+Sometimes we will need to access only certain elements of a vector. Let's create a new vector `x` that we will work with to subset:
+
+```{r}
+x <- seq(60, 70, 1)
+x
+```
+
+Often subsetting in `R` involves using brackets [ ].
+```{r}
+x[1]
+x[2]
+```
+
+#### QUESTION: What will the following code do?
+```{r, eval= F, echo = T}
+x[c(1, 3)]
+x[c(2, 3, 6)]
+x[c(6, 3, 2)]
+```
+
+Often we will use Boolean logical operators in subsetting.
+
+Some operators:
+
+ * == : equal to
+ * $\leq$ : less than
+ * $\geq$ : greater than
+ * \&, \&\& : and
+ * $\vert$, $\vert \vert$ : or
+
+
+```{r}
+x<60
+x<65
+```
+
+Note: without using [ ], `R` simply returns a vector of class logical containing elements of either `TRUE` or `FALSE`.
+
+```{r}
+x[x < 65]
+x > 60 & x < 65
+x[x > 60 & x < 65]
+x[x < 60 | x > 65]
+x[x == 60]
+```
+
+## Some more helpful vector functions
+
+Finding the length of a vector.
+
+```{r}
+n = length(x)
+n    
+```
+
+What would the following code do?
+```{r, eval = F}
+x[1:length(x)]
+x[3:length(x)]
+
+x[1:n]
+x[3:n]
+```
+
+Is an object a vector?
+
+```{r}
+is.vector(x)
+```
+
+Let's convert an object to a vector. Note: for every class of object that has an "is" function, there is also an "as" function.
+
+```{r}
+vec.x2<-as.vector(x)
+is.vector(vec.x2)
+```
+
+Many of `R`'s statistics functions take vectors as arguments.
+
+```{r}
+mean(x)
+sd(x)
+```
+
+# Matrices in `R`
+There are many ways to use the `matrix()} function to create a matrix.
+
+```{r}
+?matrix
+x <- matrix(1:12, nrow=3)
+x
+```
+
+Alternatively:
+```{r}
+y <- matrix(1:12, ncol=4)
+y
+```
+
+Alternatively, we can coerce a vector into a matrix:
+```{r}
+z <- 1:10
+matrix.z <- matrix(z, ncol=5)
+matrix.z
+```
+
+Let's create a matrix of zeroes and add 1's to the diagonal.
+```{r}
+matrix.zero <- matrix(0, nrow=5, ncol=5)
+matrix.zero
+
+diag(matrix.zero) = 1
+matrix.zero
+```
+
+Similarly to finding the length of a vector, we often want to find the dimensions of a matrix
+
+```{r}
+dim(x)
+```
+
+## Subsetting a matrix
+
+To isolate or look at parts of a matrix we will still use brackets [ ], but now we have two dimensions.
+
+```{r,}
+z <- 1:30
+matrix.z <- matrix(z, ncol=5)
+matrix.z
+
+#Display only the fifth row of matrix.a
+matrix.z[5, ]  
+
+#Display only the third column
+matrix.z[ , 3] 
+
+#Display the third and fourth columns
+matrix.z[ , 3:4]
+
+#Display the second and fourth columns
+matrix.z[ , c(2,4)]
+
+#Display the first and fifth rows
+matrix.z[c(1,5), ]
+
+#Change the value/s of an element or elements in the matrix
+#Change all of column 1 to zeros
+matrix.z[ , 1] = 0
+matrix.z
+
+#Change all of column 3 to 50
+matrix.z[3, ] = 50
+matrix.z
+
+#Change row 1, column 4 to 999
+matrix.z[1, 4] = 999
+matrix.z
+```
+
+We can also create a new matrix by combining columns or rows from a pre-existing matrix.  The command cbind combines columns, and the command rbind combines rows.\
+
+Note: You need to have the same number of columns to use cbind, and rows to use rbind.
+
+```{r}
+
+matrix.a <- matrix(1:25, nrow=5)
+matrix.a
+
+matrix.b <- matrix(50:74, nrow=5)
+matrix.b
+
+#Combine matrix a and b by column.
+matrix.c <- cbind(matrix.a, matrix.b)
+matrix.c
+
+#Combine matrix a and b by row.
+matrix.d <- rbind(matrix.a, matrix.b)
+matrix.d
+
+#Combine column 1 in matrix a with column 1 of matrix b.
+matrix.col1 <- cbind(matrix.a[,c(1)],
+                     matrix.b[,c(1)])
+matrix.col1
+
+#Combine row 5 in matrix a with row 3 in matrix b.
+matrix.row <- rbind(matrix.a[c(5),], 
+                    matrix.b[c(3),])
+matrix.row
+```
+
+## Mathematical operations using matrices
+
+First we will go over addition and subtraction. Recall, we can only add and subtract matrices with the same number of dimensions.
+
+```{r}
+matrix.a <- matrix(1, ncol=5, nrow=5)
+matrix.a
+
+matrix.b <- matrix(5, ncol=5, nrow=5)
+matrix.b
+
+matrix.a - matrix.b
+matrix.b - matrix.a
+matrix.a + matrix.b
+```
+
+To multiply matrices we need the left matrix to have the same number of columns as the number of rows in the right matrix. Instead of \* we use \%*\% to multiply matrices.\
+
+Take note of what happens when we try to do the following operations:
+
+ * $CD$: `matrix.c \%*\% matrix.d`
+ * $DC$: `matrix.d \%*\% matrix.c`
+
+
+```{r}
+matrix.c <- matrix(3, ncol=4, nrow=5)
+matrix.c
+
+dim(matrix.c)
+
+matrix.d <- matrix(7, ncol=5, nrow=3)
+matrix.d
+
+dim(matrix.d)
+```
+```{r, eval = F}
+
+matrix.c %*% matrix.d 
+
+matrix.d %*% matrix.c
+```
+## Simple Linear Regression Example
+
+# Practice 1
+
+
+  *  Create a vector with the numbers 0-20 sequenced by 5.  What is the length of the vector? 
+  *  Create a vector that draws 20 random numbers from a normal distribution with a mean of 0 and a standard deviation of 1. Is the mean of this vector zero?
+  *  Create a matrix that includes the numbers 1-6, with the following dimensions: $2 \times 3$.  What number is in the first row, second column?
+  *  Create another matrix (give it a different name) that includes the numbers 1-6 with the following dimensions: $3 \times 2$
+  *  Before multiplying these matrices in R, multiply these matrices by hand on paper.  What will be the dimensions of the results matrix?  
+  *  Use R to multiply the matrices that you created in a) and b) and check your results.  
+
+
+# Reading and Writing Files
+
+## The Working Directory
+To open files in `R` we need to specify the directory our datafiles are stored in. There are two ways to do this: using code or via the dropdown menus (this will vary by Windows or Mac).
+
+```{r, eval = F}
+setwd("~/Dropbox/MathCamp/2020/Lecture2/Lab2/")
+```
+
+To set the working directory in your .Rmd document, you will need to include the following line of code:
+```{r, eval = F}
+knitr::opts_knit$set(root.dir = '~/Dropbox/MathCamp/2020/Lecture2/Lab2')
+```
+
+There are many ways to read in files to `R`, depending on the file type.
+## Read and Write .csv
+```{r} 
+?read.csv
+data <- read.csv("Seattle_Pet_Licenses.csv")
+write.csv(data, file = 'Seattle_Pets_copy.csv',
+          row.names = F)
+```
+
+## Read and write R data files, .rda
+
+```{r}
+data_copy <- data
+save(data_copy, file = 'SeattlePets.rda') 
+rm(data_copy) 
+```
+What is the name of the data set that loaded by the line of code below?
+```{r}
+load('SeattlePets.rda') 
+```
+
+## Stata files, .dta
+
+To load Stata data files we either need to use the package `foreign` or `haven`.
+```{r}
+library(haven)
+library(janitor) # use janitor to reformat column names
+colnames(data_copy) <- colnames(janitor::clean_names(data_copy))
+write_dta(data_copy, path = 'SeattlePets.dta') #Save as a stata data frame
+rm(data_copy)
+
+data_copy <- read_dta('SeattlePets.dta')
+```
+
+Recall if you have not installed the `haven` package you can do so using the following line of code.
+```{r, eval = F}
+install.packages('haven', dependencies = T)
+```
+## Other file types
+
+Try Google-ing! Chances are there's a package for the file type of your choice. I've loaded ASCII files, .txt, .xls, .xlsx files among others.
+
+## `data.frame`
+
+A `data.frame` is a type of `R` object used for storing data. It can store non-numeric data as well.\
+
+Let's go through some commands for exploring and viewing data frames.
+
+Test whether an object is a `data.frame` object.
+
+```{r}
+is.data.frame(data)  
+is.data.frame(data_copy)
+rm(data_copy)
+```
+View variable names.
+```{r}
+# VARIABLE NAMES
+names(data)
+colnames(data)
+```
+
+```{r, eval = F}
+rownames(data)
+```
+
+Find dimensions.
+```{r}
+dim(data) # this gives rows and then columns (n X p)
+nrow(data)
+ncol(data)
+length(data) # NOT ADVISED TO USE WITH MATRICES OR DATA FRAMES
+```
+
+# Data Manipulation
+Like we did with vectors and matrices, we may want to select or view partial data frames.
+
+
+Whether you go down the base `R` or `tidyr`/`dplyr` path is up to you, but I want you to have some familiarity with both.
+
+
+  * Vignette base `R` vs `tidyverse`: \url{https://tavareshugo.github.io/data_carpentry_extras/base-r_tidyverse_equivalents/base-r_tidyverse_equivalents.html}
+  * `tidyr`, `dplyr` cheat sheet: https://rstudio.com/wp-content/uploads/2015/02/data-wrangling-cheatsheet.pdf
+
+### Selecting variables
+
+In base `R`, we select a column in one of two ways
+```{r, echo = T, eval = F}
+library(dplyr)
+library(tidyr)
+data$Species
+data[ , c("Species")]
+```
+
+In the Hadleyverse we use the `select` function:
+
+```{r, echo = T, eval = F}
+select(data, Species)
+```
+### Subsetting data
+In base `R`, we subset data using Boolean logic tests. Here is a new `data.frame` of all the observations whose species is ``Cat''.
+
+```{r, echo = T, eval = T}
+head(data)
+table(data$Species)
+
+cat.base <- data[data$Species == "Cat", ]
+dim(cat.base)
+head(cat.base)
+```
+
+In the Hadleyverse one would use the `filter` function.
+
+```{r, echo = T, eval = F}
+cat.tidy <- filter(data, Species == "Cat")
+dim(cat.tidy)
+head(cat.tidy)
+```
+
+We can also use what is called ``the pipeline'' to do the same operation: 
+```{r, echo = T, eval = F}
+cat.tidy2 <- data %>% filter(Species == "Cat" )
+dim(cat.tidy2)
+head(cat.tidy2)
+```
+
+or to do multiple sequential operations. 
+
+Note: you must link the sequential functions by `%>%`. To make your code clean you probably want to use multiple lines, but the `%>%` must come at the end of a line or `R` will end your operation. What happens if you run this chunk of code?
+```{r, echo = T, eval = F}
+data %>% filter(Species == "Cat" ) %>%
+  select(Species)
+
+data %>% filter(Species == "Cat" ) %>%
+  select(Species)
+```
+
+
+### Making a new variable
+
+```{r, echo = T, eval = T}
+caf.data <- read.csv('caffeine.csv', header = T)
+head(data)
+caf.data$CaffKg <- caf.data$Caffeine/1000
+```
+
+```{r, echo = T, eval = F}
+# dplyr
+caf.dplyr <- mutate(caf.data,
+                     CaffKg = Caffeine/1000)
+head(caf.dplyr)
+
+caf.dplyr <- caf.dplyr %>% 
+  mutate(CaffKg = Caffeine/1000)
+
+```
+
+
+### Summary statistics
+
+```{r, echo = T, eval = T}
+caf.sum.base <- data.frame(CaffMean = mean(caf.data$Caffeine),
+                           CaffSd = sd(caf.data$Caffeine))
+head(caf.sum.base)
+
+# Use the "aggregate" function
+## Column names might have to be changed afterwards
+caf.sum.base <- aggregate(formula = 
+                            Caffeine ~ 1, 
+                           data = caf.data,
+                           FUN = function(x) c(mean = mean(x), sd = sd(x)))
+head(caf.sum.base)
+```
+```{r, echo = T ,eval =F}
+caf.sum.dplyr <- summarise(caf, 
+                            CaffMean = mean(Caffeine),
+                            CaffSD  = sd(Caffeine))
+head(caf.sum.dplyr)
+
+caf.sum.dplyr <- summarise_at(caf, 
+                               .vars = c("Caffeine"), 
+                               .funs = c("mean", "sd"))
+names(caf.sum.dplyr)
+```
+
+### Summary statistics by group
+
+In many cases it's inconsequential whether you use base `R` or the `tidyverse`. Often `tidyr` and `dplyr` functions are a bit faster than `R`, but I find the `summarise`function in the `tidyverse` to be MUCH, MUCH slower than `aggregate` in base `R`.
+```{r, echo = T, eval = T}
+data(mtcars)
+mtcars.sum.by <- aggregate(formula = cbind(mpg, wt) ~ cyl + gear, 
+          data = mtcars, 
+          FUN = function(x){
+            c(mean = mean(x), sd = sd(x))
+          },
+          drop = T)
+mtcars.sum.by
+
+mtcars$total <- 1
+mtcars.sum.by2 <- aggregate(formula = total ~ cyl + gear, 
+          data = mtcars, 
+          FUN = sum, drop = T)
+mtcars.sum.by2
+table(mtcars$cyl, mtcars$gear)
+
+```
+```{r, echo = T, eval = F}
+mtcars.sum.dplyr <- mtcars %>% 
+  group_by(cyl, gear) %>% 
+  summarise(mpg.mean = mean(mpg),
+            mpg.sd = sd(mpg),
+            wt.mean = mean(wt),
+            wt.sd = sd(wt),
+            total = n()) %>% 
+  ungroup()
+mtcars.sum.dplyr
+```
+### `summary()`
+The `summary()` function will summarize variables in a data set, based on their class.
+
+```{r}
+summary(data)
+
+min(caf.data$Caffeine)
+max(caf.data$Caffeine)
+mean(caf.data$Caffeine)
+sd(caf.data$Caffeine)
+var(caf.data$Caffeine)
+sqrt(var(caf.data$Caffeine)) # same as the sd
+median(caf.data$Caffeine)
+
+quantile(caf.data$Caffeine,0.5)
+quantile(caf.data$Caffeine,0.25)
+quantile(caf.data$Caffeine,0.75)
+quantile(caf.data$Caffeine,c(0.25,0.5,0.75))
+```
+
+
