@@ -21,7 +21,7 @@ The daily schedule may vary as we adapt to an online version of Math Camp, but t
 
 Slides and materials will be linked to in the schedule below as they are made available. The materials provided here have been largely created by previous CSSS Math Camp instructors, including [Jessica Godwin](https://jlgodwin.github.io/MathCamp).
 
-## Monday
+## Monday, September 13
 **Lecture**
  * Algebra, Functions, Limits
  * [Slides](https://peteragao.github.io/CSSS-Math-Camp-2021/Lectures/Lecture1.pdf)  \| [Problem Set](https://peteragao.github.io/CSSS-Math-Camp-2021/ProblemSets/problemset1.pdf) \| [Solutions](https://peteragao.github.io//CSSS-Math-Camp-2021/ProblemSets/solutions1.pdf)
@@ -37,7 +37,7 @@ Slides and materials will be linked to in the schedule below as they are made av
  * [Lab](https://peteragao.github.io/CSSS-Math-Camp-2021/Labs/Rlab1.html) \| [R Markdown](https://peteragao.github.io/CSSS-Math-Camp-2021/Labs/Rlab1.Rmd) \| [R script](https://peteragao.github.io/CSSS-Math-Camp-2021/Labs/Rlab1.R) 
 
 
-## Tuesday
+## Tuesday, September 14
 **Lecture**
  * Matrix Algebra
  * [Slides](https://peteragao.github.io/CSSS-Math-Camp-2021/Lectures/Lecture2.pdf)  \| [Problem Set](https://peteragao.github.io/CSSS-Math-Camp-2021/ProblemSets/problemset2.pdf) \| [Solutions](https://peteragao.github.io//CSSS-Math-Camp-2021/ProblemSets/solutions2.pdf)
@@ -55,7 +55,7 @@ Slides and materials will be linked to in the schedule below as they are made av
 * Matrices & Dataframes in R, Data I/O, Data manipulation
  * [Lab](https://peteragao.github.io/CSSS-Math-Camp-2021/Labs/Rlab4.html) \| [R Markdown](https://peteragao.github.io/CSSS-Math-Camp-2021/Labs/Rlab4.Rmd) \| [Seattle_Pet_Licenses.csv](https://peteragao.github.io/CSSS-Math-Camp-2021/Labs/Seattle_Pet_Licenses.csv) \| [caffeine.csv](https://peteragao.github.io/CSSS-Math-Camp-2021/Labs/caffeine.csv) 
  
-## Wednesday
+## Wednesday, September 15
 **Lecture**
 * Integral Calculus
 * [Slides](https://peteragao.github.io/CSSS-Math-Camp-2021/Lectures/Lecture4.pdf)  \| [Problem Set](https://peteragao.github.io/CSSS-Math-Camp-2021/ProblemSets/problemset4.pdf) \| [Solutions](https://peteragao.github.io//CSSS-Math-Camp-2021/ProblemSets/solutions4.pdf)
@@ -74,7 +74,7 @@ Slides and materials will be linked to in the schedule below as they are made av
 * Plotting basics 
 * [Lab I](https://peteragao.github.io/CSSS-Math-Camp-2021/Labs/Rlab3.html) \| [R Markdown I](https://peteragao.github.io/CSSS-Math-Camp-2021/Labs/Rlab3.Rmd) \| [Lab II](https://peteragao.github.io/CSSS-Math-Camp-2021/Labs/Rlab4.html) \| [R Markdown II](https://peteragao.github.io/CSSS-Math-Camp-2021/Labs/Rlab4.Rmd)
 
-## Thursday
+## Thursday, September 16
 **Lecture**
  * Random variables, densities, moments
  * [Slides](https://peteragao.github.io/CSSS-Math-Camp-2021/Lectures/Lecture6.pdf) \| [Problem Set](https://peteragao.github.io/CSSS-Math-Camp-2021/ProblemSets/problemset6.pdf) \| [Solutions](https://peteragao.github.io//CSSS-Math-Camp-2021/ProblemSets/solutions6.pdf)
@@ -95,6 +95,6 @@ Slides and materials will be linked to in the schedule below as they are made av
  * Sampling
 
  
-## Friday
+## Friday, September 17
 **Lecture**
  * Maximum likelihood estimation
