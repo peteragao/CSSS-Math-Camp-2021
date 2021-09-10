@@ -7,7 +7,7 @@ output: html_document
 
 ```{r setup, echo = FALSE}
 knitr::opts_chunk$set(echo = TRUE)
-knitr::opts_knit$set(root.dir = '~/Dropbox/MathCamp/2020/Lab1')
+knitr::opts_knit$set(root.dir = '~/Dropbox/MathCamp/2021/Lab1')
 ```
 
 ## Download R
