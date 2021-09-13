@@ -315,7 +315,7 @@ summary(cars)</code></pre>
 ##  Mean   :15.4   Mean   : 42.98  
 ##  3rd Qu.:19.0   3rd Qu.: 56.00  
 ##  Max.   :25.0   Max.   :120.00</code></pre>
-<p>A handy Rstudio/R Markdown cheatsheet can be found <a href="/Labs/rmarkdown.pdf">here</a>. It gives summaries of the most used Markdown syntax aspects (e.g. headings/subheadings, bullet lists, numbered lists), the types of files R Markdown can create and examples of how R and R Markdown interact.</p>
+<p>A handy Rstudio/R Markdown cheatsheet can be found <a href="https://peteragao.github.io/CSSS-Math-Camp-2021/Labs/rmarkdown.pdf">here</a>. It gives summaries of the most used Markdown syntax aspects (e.g. headings/subheadings, bullet lists, numbered lists), the types of files R Markdown can create and examples of how R and R Markdown interact.</p>
 <p>This is an example of an an R Markdown file that will be used to create a .html file. This is the best option if you don’t have much math to write or do not need to share a .pdf.</p>
 <div id="why-use-r-markdown" class="section level3">
 <h3>Why use R Markdown?</h3>
@@ -369,6 +369,45 @@ purl(&#39;Rlab1.Rmd&#39;)</code></pre>
 <p><span class="math display">\[\begin{equation}
 y = x.
 \end{equation}\]</span></p>
+</div>
+<div id="ifthen" class="section level3">
+<h3>If/Then</h3>
+</div>
+<div id="loops" class="section level3">
+<h3>Loops</h3>
+</div>
+<div id="functions" class="section level3">
+<h3>Functions</h3>
+</div>
+<div id="exercises" class="section level3">
+<h3>Exercises</h3>
+<ol style="list-style-type: decimal">
+<li><p>How would you compute the mean/median/mode for the following set of numbers: <code>4, 4, 5, 7, 7, 8, 10, 12, 13, 14</code>?</p></li>
+<li><p>How would you compute <span class="math inline">\(\sin(2\pi/3)\)</span>?</p></li>
+<li><p>Take a look at the following definition of <code>f</code>. What is <code>f(5)</code>?</p>
+<pre class="r"><code>f &lt;- function(x) {
+  if (x &gt; 10) {
+    return(1)
+  } else{
+    return(0)
+  }
+}</code></pre></li>
+<li><p>Suppose you run the following chunk of code. What is <code>x</code> after running the code? What is <code>y</code>? Check your answer by running the code.</p>
+<pre class="r"><code>x &lt;- 5
+y &lt;- x + 1
+if (x &lt; 10) {
+  x &lt;- 1
+}</code></pre></li>
+<li><p>Suppose you run the following chunk of code. What is <code>x</code> after running the code? What is <code>y</code>?</p>
+<pre class="r"><code>x &lt;- 2
+y &lt;- 2
+for (i in 1:3) {
+  x &lt;- x * x
+  y &lt;- y * 2
+}
+x</code></pre></li>
+<li><p>How could you write code to calculate <span class="math inline">\(1\times 2\times 3\times\cdot\times 99\times 100\)</span>?</p></li>
+</ol>
 </div>
 </div>
 
