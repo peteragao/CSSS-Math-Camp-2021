@@ -12,7 +12,7 @@ knitr::opts_knit$set(root.dir = '~/Dropbox/MathCamp/2021/Lab1')
 
 ## Download R
 
-What is `R`? Open-source, free, stastical computing software.
+What is `R`? Open-source, free, statistical computing software.
 
 Go to the [R website](https://cran.r-project.org/), and download the appropriate software for your operating system.
 
@@ -167,7 +167,7 @@ summary(cars)
 ```
 
 
-A handy Rstudio/R Markdown cheatsheet can be found here <https://rstudio.com/wp-content/uploads/2016/03/rmarkdown-cheatsheet-2.0.pdf>. It gives summaries of the most used Markdown syntax aspects (e.g. headings/subheadings, bullet lists, numbered lists), the types of files R Markdown can create and examples of how R and R Markdown interact.
+A handy Rstudio/R Markdown cheatsheet can be found [here](/Labs/rmarkdown.pdf). It gives summaries of the most used Markdown syntax aspects (e.g. headings/subheadings, bullet lists, numbered lists), the types of files R Markdown can create and examples of how R and R Markdown interact.
 
 This is an example of an an R Markdown file that will be used to create a .html file. This is the best option if you don't have much math to write or do not need to share a .pdf.
 
