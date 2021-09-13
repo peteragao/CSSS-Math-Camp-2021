@@ -5,10 +5,7 @@ date: "September 13, 2021"
 output: html_document
 ---
 
-```{r setup, echo = FALSE}
-knitr::opts_chunk$set(echo = TRUE)
-knitr::opts_knit$set(root.dir = '~/Dropbox/MathCamp/2021/Lab1')
-```
+
 
 ## Download R
 
@@ -51,33 +48,114 @@ We can do basic mathematical computations using +,-, *, /, and ().\
 
 Note: `pi` is hard coded into `R`.\
 
-```{r, eval = T, echo = T}
+
+```r
 2+3
+```
+
+```
+## [1] 5
+```
+
+```r
 6*7
+```
+
+```
+## [1] 42
+```
+
+```r
 pi*1  
+```
+
+```
+## [1] 3.141593
+```
+
+```r
 6*3/2-3
+```
+
+```
+## [1] 6
+```
+
+```r
 6*3/(2-3)
+```
+
+```
+## [1] -18
+```
+
+```r
 1/0
+```
+
+```
+## [1] Inf
 ```
 
 Try some on your own!\
 
 What about more complicated functions like exponents, square roots, trig functions and the natural logarithm?\
 
-```{r, echo = T, eval = T}
+
+```r
 3^2
+```
+
+```
+## [1] 9
+```
+
+```r
 2^(3+2)
+```
+
+```
+## [1] 32
+```
+
+```r
 sqrt(9)
+```
+
+```
+## [1] 3
+```
+
+```r
 sin(2*pi)
+```
+
+```
+## [1] -2.449294e-16
+```
+
+```r
 log(1000)  
+```
+
+```
+## [1] 6.907755
+```
+
+```r
 exp(6.907755)   
+```
+
+```
+## [1] 999.9997
 ```
 
 Note: \texttt{log()} computes the natural logarithm. See \texttt{?log} to compute a logarithm with a different base.\
 
 ### Documentation
 One convenient feature in \texttt{R} is the documenation for all functions. If you want to learn more about a function and its arguments you can simply type a question mark in front of the function name or use the \texttt{help()} function.
-```{r, echo = T, eval = F}
+
+```r
 ?log
 help("log")
 ```
@@ -87,7 +165,8 @@ According to the above help files, what function (or functions) would you need t
 
 There are a few other functions that can help you understand how to use functions or recall their arguments.
 
-```{r, echo = T, eval = F}
+
+```r
 help.search("log")
 args(log)
 ```
@@ -104,15 +183,32 @@ Notes:
   *  `<-` is most common, but `=` is acceptable
 
 
-```{r, eval = T, echo = T}
+
+```r
 x<-2 #Creates the object "x"
 x    #Shows the contents of object "x"
+```
 
+```
+## [1] 2
+```
+
+```r
 y=3.5
 y
+```
 
+```
+## [1] 3.5
+```
+
+```r
 h<-"practice"   #You can also put strings in an object
 h
+```
+
+```
+## [1] "practice"
 ```
 
 Objects can be numbers, strings, matrices, or even more complicated `R` objects.\
@@ -127,24 +223,67 @@ Examples of `R` object types:
 
 There are handy functions for seeing whether or not an object is of a certain type. These functions are usually important for debugging and making sure you are inputing the proper object type into a function argument.
 
-```{r, echo = T, eval = T}
+
+```r
 is.integer(y)
+```
+
+```
+## [1] FALSE
+```
+
+```r
 is.numeric(y)
+```
+
+```
+## [1] TRUE
+```
+
+```r
 is.character(h)
+```
+
+```
+## [1] TRUE
+```
+
+```r
 is.matrix(x)
 ```
 
+```
+## [1] FALSE
+```
+
 The function \texttt{ls()} will list all of the objects that have been created:
-```{r, echo = T, eval = T}
+
+```r
 ls()
+```
+
+```
+## [1] "h" "x" "y"
 ```
 
 Here we see we have in our environment the objects we created \texttt{x, y, h}. If we assign a new value to \texttt{x} it will overwrite what is already stored in that object
 
-```{r}
+
+```r
 x     #Original object that we created above.
+```
+
+```
+## [1] 2
+```
+
+```r
 x<-7  #New object with same name
 x     #New object
+```
+
+```
+## [1] 7
 ```
 
 ## R Markdown
@@ -161,9 +300,20 @@ It will open up a new template .Rmd file for you to begin editing that will look
 
 When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
 
-```{r}
+
+```r
 data(cars)
 summary(cars)
+```
+
+```
+##      speed           dist       
+##  Min.   : 4.0   Min.   :  2.00  
+##  1st Qu.:12.0   1st Qu.: 26.00  
+##  Median :15.0   Median : 36.00  
+##  Mean   :15.4   Mean   : 42.98  
+##  3rd Qu.:19.0   3rd Qu.: 56.00  
+##  Max.   :25.0   Max.   :120.00
 ```
 
 
@@ -190,9 +340,10 @@ While not nicely named, R code can be included in an R Markdown file in what we 
 
 
 
-```{r pressure, echo=FALSE, fig.align = 'center', fig.cap = "For example, this figure was created with \tt{echo = FALSE} and \tt{eval = TRUE.}"}
-plot(pressure)
-```
+<div class="figure" style="text-align: center">
+<img src="Rlab1_files/figure-html/pressure-1.png" alt="For example, this figure was created with 	t{echo = FALSE} and 	t{eval = TRUE.}" width="672" />
+<p class="caption">For example, this figure was created with 	t{echo = FALSE} and 	t{eval = TRUE.}</p>
+</div>
 
 Chunks allow you to break up your code into smaller pieces that a reader can understand. It's great for writing reports/homeworks so that you can include code immediately followed by its output.\
 
@@ -200,7 +351,8 @@ Chunks allow you to break up your code into smaller pieces that a reader can und
 
 You can use the function `purl()` on a .Rmd document and it will create a new `.R` file with only the R code in the chunks. Copy and paste the following code line by line into your document to create a document called `Rlab1.R` containing only the `R` code in this document.
 
-```{r, eval = F}
+
+```r
 install.packages('knitr', dependencies = T)
 library(knitr)
 purl('Rlab1.Rmd')
@@ -245,7 +397,8 @@ y = x.
 
 3. Take a look at the following definition of ```f```. What is ```f(5)```?
 
-    ```{r, eval = F}
+    
+    ```r
     f <- function(x) {
       if (x > 10) {
         return(1)
@@ -257,7 +410,8 @@ y = x.
 
 4. Suppose you run the following chunk of code. What is ```x``` after running the code? What is ```y```? Check your answer by running the code.
 
-    ```{r, eval = F}
+    
+    ```r
     x <- 5
     y <- x + 1
     if (x < 10) {
@@ -268,7 +422,8 @@ y = x.
 
 5. Suppose you run the following chunk of code. What is ```x``` after running the code? What is ```y```?
 
-    ```{r, eval = F}
+    
+    ```r
     x <- 2
     y <- 2
     for (i in 1:3) {
