@@ -1,0 +1,42 @@
+---
+title: "Monday's Lab"
+author: "Peter Gao"
+date: "9/13/2021"
+output: html_document
+---
+
+hello something something something
+
+I did some data analysis--see the code below:
+
+
+```{r}
+3+2
+```
+
+
+```{r, eval = F}
+# Objects/variables
+x <- TRUE
+y <- "hello"
+z <- 5
+
+is.numeric(x)
+is.numeric(y)
+is.numeric(z)
+
+is.logical(x)
+is.logical(y)
+```
+
+Below is the ls function which lists all the objects in the environment. 
+
+```{r}
+ls()
+```
+```{r}
+a <- 5
+a <- a + 2
+print(a)
+```
+
