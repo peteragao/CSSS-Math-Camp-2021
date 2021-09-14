@@ -45,11 +45,7 @@ Slides and materials will be linked to in the schedule below as they are made av
     * [Lecture Video: Matrix operations](https://washington.zoom.us/rec/share/PT7hHLadLzZMfgZxGNkcfMESA3l3yuMmugyiX9Y0sXbipsxwTosn8Uv-tcUI0czf.mxEtJLDv4s4OkOyO?startTime=1629923203000)
     * [Lecture Video: Least squares](https://washington.zoom.us/rec/share/xjQPIgeQ9c2OBy3fzSvFY5XYAF22D8hmzJzvw4Sp5TUBSBMgwKVX5-FJb4LB1OUb.SG5606hDSDJt77e_?startTime=1629932017000)
     * [Lecture Video: Least squares continued](https://uw.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=8a347ff8-fdd2-4a73-8845-ad8f01845940)
- * Differential calculus
- * [Slides](https://peteragao.github.io/CSSS-Math-Camp-2021/Lectures/Lecture3.pdf) \| [Problem Set](https://peteragao.github.io/CSSS-Math-Camp-2021/ProblemSets/problemset3.pdf) \| [Solutions](https://peteragao.github.io//CSSS-Math-Camp-2021/ProblemSets/solutions3.pdf)
-     * [Lecture Video: Intro to Derivatives](https://washington.zoom.us/rec/share/u_BYWF5whBlM-V1-6owoZgncXk_6YDDm9xvPSSOMPv7g90bSD5D0j0H-O5C7zJTM.BnKrPiC6wUiv88gb?startTime=1630014344000)
-    * [Lecture Video: Rules for differentiation](https://washington.zoom.us/rec/share/u_BYWF5whBlM-V1-6owoZgncXk_6YDDm9xvPSSOMPv7g90bSD5D0j0H-O5C7zJTM.BnKrPiC6wUiv88gb?startTime=1630015929000)
-    * [Lecture Video: Critical Values](https://washington.zoom.us/rec/share/u_BYWF5whBlM-V1-6owoZgncXk_6YDDm9xvPSSOMPv7g90bSD5D0j0H-O5C7zJTM.BnKrPiC6wUiv88gb?startTime=1630017267000)
+
  
 **Lab**
 * Matrices & Dataframes in R, Data I/O, Data manipulation
@@ -57,15 +53,15 @@ Slides and materials will be linked to in the schedule below as they are made av
  
 ## Wednesday, September 15
 **Lecture**
+* Differential calculus
+* [Slides](https://peteragao.github.io/CSSS-Math-Camp-2021/Lectures/Lecture3.pdf) \| [Problem Set](https://peteragao.github.io/CSSS-Math-Camp-2021/ProblemSets/problemset3.pdf) \| [Solutions](https://peteragao.github.io//CSSS-Math-Camp-2021/ProblemSets/solutions3.pdf)
+     * [Lecture Video: Intro to Derivatives](https://washington.zoom.us/rec/share/u_BYWF5whBlM-V1-6owoZgncXk_6YDDm9xvPSSOMPv7g90bSD5D0j0H-O5C7zJTM.BnKrPiC6wUiv88gb?startTime=1630014344000)
+    * [Lecture Video: Rules for differentiation](https://washington.zoom.us/rec/share/u_BYWF5whBlM-V1-6owoZgncXk_6YDDm9xvPSSOMPv7g90bSD5D0j0H-O5C7zJTM.BnKrPiC6wUiv88gb?startTime=1630015929000)
+    * [Lecture Video: Critical Values](https://washington.zoom.us/rec/share/u_BYWF5whBlM-V1-6owoZgncXk_6YDDm9xvPSSOMPv7g90bSD5D0j0H-O5C7zJTM.BnKrPiC6wUiv88gb?startTime=1630017267000)
 * Integral Calculus
 * [Slides](https://peteragao.github.io/CSSS-Math-Camp-2021/Lectures/Lecture4.pdf)  \| [Problem Set](https://peteragao.github.io/CSSS-Math-Camp-2021/ProblemSets/problemset4.pdf) \| [Solutions](https://peteragao.github.io//CSSS-Math-Camp-2021/ProblemSets/solutions4.pdf)
     * [Lecture Video: Introduction to Integrals](https://washington.zoom.us/rec/share/Hro-6N5l4fIyrjx7aZVFZwxzfTx8GEOUvdlC2RILoyqumyMLQ-OpWDMQYIPV2mZP.2-6iT1zbdWSNMz53?startTime=1630090996000)
     * [Lecture Video: Rules for integration](https://washington.zoom.us/rec/share/Hro-6N5l4fIyrjx7aZVFZwxzfTx8GEOUvdlC2RILoyqumyMLQ-OpWDMQYIPV2mZP.2-6iT1zbdWSNMz53?startTime=1630092654000)
-* Introduction to probability
-* [Slides](https://peteragao.github.io/CSSS-Math-Camp-2021/Lectures/Lecture5.pdf) \| [Problem Set](https://peteragao.github.io/CSSS-Math-Camp-2021/ProblemSets/problemset5.pdf) \| [Solutions](https://peteragao.github.io//CSSS-Math-Camp-2021/ProblemSets/solutions5.pdf)
-    * [Lecture Video: Introduction to Probability I ](https://washington.zoom.us/rec/share/0YQ4UG9aVlbzCMQeyEze_1JW9seneQSwpQElPkPnd1SacECkawqeu0PeA4glaNGY.hJUPiCMgu6-1Qawz?startTime=1630356226000)
-    * [Lecture Video:  Introduction to Probability II](https://washington.zoom.us/rec/share/0YQ4UG9aVlbzCMQeyEze_1JW9seneQSwpQElPkPnd1SacECkawqeu0PeA4glaNGY.hJUPiCMgu6-1Qawz?startTime=1630357735000)
-    * [Lecture Video:  Relative Risk](https://washington.zoom.us/rec/share/0YQ4UG9aVlbzCMQeyEze_1JW9seneQSwpQElPkPnd1SacECkawqeu0PeA4glaNGY.hJUPiCMgu6-1Qawz?startTime=1630359226000)
 
 
 
@@ -76,19 +72,18 @@ Slides and materials will be linked to in the schedule below as they are made av
 
 ## Thursday, September 16
 **Lecture**
+* Introduction to probability
+* [Slides](https://peteragao.github.io/CSSS-Math-Camp-2021/Lectures/Lecture5.pdf) \| [Problem Set](https://peteragao.github.io/CSSS-Math-Camp-2021/ProblemSets/problemset5.pdf) \| [Solutions](https://peteragao.github.io//CSSS-Math-Camp-2021/ProblemSets/solutions5.pdf)
+    * [Lecture Video: Introduction to Probability I ](https://washington.zoom.us/rec/share/0YQ4UG9aVlbzCMQeyEze_1JW9seneQSwpQElPkPnd1SacECkawqeu0PeA4glaNGY.hJUPiCMgu6-1Qawz?startTime=1630356226000)
+    * [Lecture Video:  Introduction to Probability II](https://washington.zoom.us/rec/share/0YQ4UG9aVlbzCMQeyEze_1JW9seneQSwpQElPkPnd1SacECkawqeu0PeA4glaNGY.hJUPiCMgu6-1Qawz?startTime=1630357735000)
+    * [Lecture Video:  Relative Risk](https://washington.zoom.us/rec/share/0YQ4UG9aVlbzCMQeyEze_1JW9seneQSwpQElPkPnd1SacECkawqeu0PeA4glaNGY.hJUPiCMgu6-1Qawz?startTime=1630359226000)
+
  * Random variables, densities, moments
  * [Slides](https://peteragao.github.io/CSSS-Math-Camp-2021/Lectures/Lecture6.pdf) \| [Problem Set](https://peteragao.github.io/CSSS-Math-Camp-2021/ProblemSets/problemset6.pdf) \| [Solutions](https://peteragao.github.io//CSSS-Math-Camp-2021/ProblemSets/solutions6.pdf)
    * [Lecture Video: Introduction to Random Variables ](https://washington.zoom.us/rec/share/z1_eyegYcCr1-kzXOsuaHmKxv0nW4lKQbI__RrH00eZa-eXx3XZ0zYMRDUTLeII.THjG5y_zaesfVuqO?startTime=1630447488000)
     * [Lecture Video:  Properties of Random Variables](https://washington.zoom.us/rec/share/z1_eyegYcCr1-kzXOsuaHmKxv0nW4lKQbI__RrH00eZa-eXx3XZ0zYMRDUTLeII.THjG5y_zaesfVuqO?startTime=1630448627000)
     * [Lecture Video:  Discrete vs. Continuous Random Variables](https://washington.zoom.us/rec/share/z1_eyegYcCr1-kzXOsuaHmKxv0nW4lKQbI__RrH00eZa-eXx3XZ0zYMRDUTLeII.THjG5y_zaesfVuqO?startTime=1630449685000)
- * Discrete distributions
- * [Slides](https://peteragao.github.io/CSSS-Math-Camp-2021/Lectures/Lecture7.pdf) \| [Problem Set](https://peteragao.github.io/CSSS-Math-Camp-2021/ProblemSets/problemset7.pdf) \| [Solutions](https://peteragao.github.io//CSSS-Math-Camp-2021/ProblemSets/solutions7.pdf)
-    * [Lecture Video: Bernoulli, Binomial, and Multinomial ](https://washington.zoom.us/rec/share/9bSaTOieXWv656W_mQLiClDRK22cS3reCb4aY75vVTog8jFMv-fvxNCDMRX2kcf2._i_5eLZojcqh1B1Z?startTime=1630522261000)
-    * [Lecture Video:  Geometric, Hypergeometric, and Poisson](https://washington.zoom.us/rec/share/9bSaTOieXWv656W_mQLiClDRK22cS3reCb4aY75vVTog8jFMv-fvxNCDMRX2kcf2._i_5eLZojcqh1B1Z?startTime=1630525529000)
- * Continuous distributions
- * [Slides](https://peteragao.github.io/CSSS-Math-Camp-2021/Lectures/Lecture8.pdf) \| [Problem Set](https://peteragao.github.io/CSSS-Math-Camp-2021/ProblemSets/problemset8.pdf) \| [Solutions](https://peteragao.github.io//CSSS-Math-Camp-2021/ProblemSets/solutions8.pdf)
-    * [Lecture Video: Uniform and Gaussian ](https://washington.zoom.us/rec/share/F323cE5sUkjbs7u1J3cXwCRklwj-VNKWZGRXwzVVPN8COYial8jTdZGvpC9DLS6S.bKdZJR08JL6LohV0?startTime=1630531304000)
-    * [Lecture Video:  Chi Squared and Exponential](https://washington.zoom.us/rec/share/F323cE5sUkjbs7u1J3cXwCRklwj-VNKWZGRXwzVVPN8COYial8jTdZGvpC9DLS6S.bKdZJR08JL6LohV0?startTime=1630532327000)
+
     
 **Lab**
  * Probability distributions
@@ -97,4 +92,12 @@ Slides and materials will be linked to in the schedule below as they are made av
  
 ## Friday, September 17
 **Lecture**
+ * Discrete distributions
+ * [Slides](https://peteragao.github.io/CSSS-Math-Camp-2021/Lectures/Lecture7.pdf) \| [Problem Set](https://peteragao.github.io/CSSS-Math-Camp-2021/ProblemSets/problemset7.pdf) \| [Solutions](https://peteragao.github.io//CSSS-Math-Camp-2021/ProblemSets/solutions7.pdf)
+    * [Lecture Video: Bernoulli, Binomial, and Multinomial ](https://washington.zoom.us/rec/share/9bSaTOieXWv656W_mQLiClDRK22cS3reCb4aY75vVTog8jFMv-fvxNCDMRX2kcf2._i_5eLZojcqh1B1Z?startTime=1630522261000)
+    * [Lecture Video:  Geometric, Hypergeometric, and Poisson](https://washington.zoom.us/rec/share/9bSaTOieXWv656W_mQLiClDRK22cS3reCb4aY75vVTog8jFMv-fvxNCDMRX2kcf2._i_5eLZojcqh1B1Z?startTime=1630525529000)
+ * Continuous distributions
+ * [Slides](https://peteragao.github.io/CSSS-Math-Camp-2021/Lectures/Lecture8.pdf) \| [Problem Set](https://peteragao.github.io/CSSS-Math-Camp-2021/ProblemSets/problemset8.pdf) \| [Solutions](https://peteragao.github.io//CSSS-Math-Camp-2021/ProblemSets/solutions8.pdf)
+    * [Lecture Video: Uniform and Gaussian ](https://washington.zoom.us/rec/share/F323cE5sUkjbs7u1J3cXwCRklwj-VNKWZGRXwzVVPN8COYial8jTdZGvpC9DLS6S.bKdZJR08JL6LohV0?startTime=1630531304000)
+    * [Lecture Video:  Chi Squared and Exponential](https://washington.zoom.us/rec/share/F323cE5sUkjbs7u1J3cXwCRklwj-VNKWZGRXwzVVPN8COYial8jTdZGvpC9DLS6S.bKdZJR08JL6LohV0?startTime=1630532327000)
  * Maximum likelihood estimation
