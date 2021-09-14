@@ -1,0 +1,170 @@
+---
+title: "Math Camp, Lab 2"
+author: "Jess Kunke"
+date: "9/13/2021"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+library(ggplot2) # where I actually load this library; this doesn't show in the final knitted HTML file
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Some notes following up on yesterday
+
+- Desmos calculator
+    - Handy tool for graphing functions!
+    - https://www.desmos.com/calculator
+- One of many R tutorials in case you're interested: https://datacarpentry.org/R-ecology-lesson/01-intro-to-r.html
+- R Markdown file formats: HTML vs PDF
+    - Knitting PDFs requires installing LaTeX on your computer (you don't need to learn/use LaTeX yourself, just install it): https://www.latex-project.org/get/
+    - This is why we're starting with knitting to HTML, but it might be handy to install LaTeX and we can try to help you troubleshoot. However, it's totally not necessary for this math camp; we just want to mention it in case you need it for your own work.
+- I **110%** recommend that you edit this R Markdown file with me as we go through the lab. Not only will actively engaging with this Rmd file and this code hone your skills, but it will allow you to organize your own notes to yourself in the same document as the rest of the lab.
+- Don't forget to knit frequently!  Allows you to catch and correct errors more easily than when you have to sift through an hour's worth of work to trace back where something went wrong if you get a knitting error.
+
+
+
+## Review of yesterday
+
+Finding your way around the R Studio environment:
+
+- Upper right panel: where your scripts/Rmd files hang out when you open them
+- Lower left panel: command prompt/command line, Console, R Markdown
+- Upper right panel: Environment, History
+- Lower right panel: Files, Plots, Packages, Help
+
+We learned how to store values under variable names, like `x <- 3` will create a variable called `x` with the value `3`.  We can then use that in math operations:
+
+```{r}
+x <- 3
+x + 4
+# Notice: what is the value of x now: is it 3, or 7? Why?
+x*10
+x-1
+x^2-1
+```
+
+
+## Let's play with some data!
+
+Let's explore some data!  A lot of R functions don't come with R itself but are available in separate packages (also called libraries) that you can install along the way as you need them. A number of these packages also come with freely available datasets.  Start by loading the `ggplot2` package with the `library(ggplot2)` command and let's check out the `mpg` dataset. (Check out in the Rmd file how I got some of that text to have code-like font.)
+
+- If you don't already have this package, first run `install.packages("ggplot2")`.
+- Once the package is installed, it's available on your computer for R to use, but R won't be ready to use it until you load the library using `library(ggplot2)`.
+- Notice that the `install.packages` command requires quotes around the library name, while the `library` command works either way (with or without quotes).
+
+```{r, eval=FALSE}
+install.packages("ggplot2")
+library(ggplot2) # just for display, so you can see the command to run
+# Note: in the Rmd file, how did I prevent R Studio from running this line when it knits the HTML file?
+# I did that since I didn't want it to print all the messages and I already loaded the library in the setup chunk above.
+```
+
+Let's explore this dataset and see what's in it, how it was generated, etc. A good place to start is the command `?mpg`. What does that do?
+
+We can also use the following commands to check out the data structure some more.  Feel free to add your own comments to the code chunk so you can make notes for your future self on what these commands do!
+
+```{r, eval=FALSE}
+str(mpg)
+summary(mpg)
+head(mpg)
+# compare behavior of tibble to data.frame object:
+head(data.frame(mpg))
+data(mpg) #loads the data set into the current environment
+```
+
+- What do you think is the name of the command that shows the *last* six rows of the data?
+- How do you modify the `head` command to show the first 10 rows of the data?
+- What does the variable `drv` represent? What data type is it stored as in the `mpg` dataset?
+- Check out the R Markdown file to see how I made this outline.
+- What happens if you add the chunk option `, echo=FALSE` after `eval=FALSE` in the setup to the above code chunk?
+
+We can see how big the dataset is too:
+
+```{r, eval=FALSE}
+dim(mpg)
+dim(mpg)[1] # what does this do?
+```
+
+Now let's explore the relationship between city mileage and highway mileage by plotting one versus the other with R's built-in `plot` function:
+
+```{r}
+plot(mpg$cty, mpg$hwy)
+```
+
+- How would you flip the axes and have highway mileage on the y-axis?
+- Explore some of the other arguments to the `plot` function (use the help page and Google as references). How do you make the scatterplot points red? How do you add a title or change the axis labels? What else can you do? (Bonus: how do you make the points smaller or make them filled in instead of open circles?)
+
+Let's try extracting just individual numbers/values from this dataset.
+
+```{r, eval=FALSE}
+mpg$year
+mpg$year[3]
+mpg$year[1:5]
+```
+
+How can you print just the first, fourth, and seventh entries of `mpg$year`?  (Add a code chunk here to document the solution we discuss for your own notes.) Related to this discussion: how might you decide when to define something as its own variable versus just using it in the code?
+
+How can you change the above code chunk so that your HTML file will show the output of those commands?  What if you want the output but not the code itself?
+
+An aside: R is what programers call a "1-indexed" language because the indices start with 1. Some languages are "0-indexed" because they start counting from 0: the index 0 gives you the first element/row/column, the index 1 gives you the second, etc.
+
+So what if you realized there's an error in the data and the third year should be 2010 instead of 2008? We can use the assignment operator `<-` as we did yesterday to fix that:
+
+```{r}
+mpg$year[3] <- 2010
+```
+
+How do we know whether to put `2010` on the left and `mpg$year[3]` on the right or vice versa? Think of it like an arrow: you want to store the value `2010` in the third entry of the `year` column, or assign `2010` to `mpg$year[3]`.
+
+What is the range of values of the `year` variable? How many different years are represented in this dataset? What about how long the column is?
+
+```{r}
+range(mpg$year)
+unique(mpg$year)
+length(mpg$year)
+```
+
+Let's add a new column to the data. Say we want the difference between the highway and city mileage.
+
+```{r, eval=FALSE}
+diff_mileage <- hwy - cty # why does this fail? how do you fix it?
+```
+
+Say we want to add a dummy variable for whether the car was manufactured during/after 2002 or before 2002. Let's call this `after2002`.
+
+```{r}
+mpg$after2002 <- mpg$year >= 2002
+# what happens if you leave off the mpg$ at the start of the line above?
+# also, why didn't this code print any output?
+```
+
+What is the variable type of `after2002` (and how do you find that out)? How would you change it to integer?
+
+Note: in order for the `>= 2002` to work, `year` must be a numeric variable. Sometimes when you read in data, you might end up with columns that are naturally numeric being read in as character/text variables instead. These are what we call different data **types**. So if you run into an error, try `str(mpg)` to verify the type of your variable.
+
+Let's see how many cars were made in the year 2008:
+
+```{r, eval=FALSE}
+sum(mpg$year=2008) # why doesn't this work? how do you fix it?
+```
+
+
+
+
+
+## Your turn
+
+Load the `midwest` dataset from the `ggplot2` library.
+
+1. What variables are in this dataset? What types are they (integer, etc)? Read a little about where this dataset came from and what the variables and their values mean.
+2. What are the dimensions of this dataset? What does each row represent?
+3. Pick two columns that make sense for a scatterplot and make a plot of one column versus the other.  Format the plot as nicely as you can.
+4. Compute the mean of the `area` column.
+5. Add a column called `popbw` to the dataset that is the total number of white people and black people.
+6. Add a column called `stateIL` that equals 1 if the state is IL and 0 otherwise.
+7. Come up with your own column to add and figure out how to add it.
+8. What other questions might you want to ask about this dataset? How would you use R to do that, or what other skills might you need to learn in R in order to do that?
+
+
+
