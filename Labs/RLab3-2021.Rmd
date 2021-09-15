@@ -1,6 +1,6 @@
 ---
 title: "Math Camp, Lab 3"
-author: "Jess Kunke"
+author: "Jess Kunke*"
 date: "9/15/2021"
 output:
     html_document:
@@ -16,7 +16,7 @@ library(ggplot2)
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-This lab draws from materials developed by Rebecca Ferrell, Max Schneider and Jess Kunke for CSSS 592 (Longitudinal Data Analysis).
+*This lab draws from materials developed by Rebecca Ferrell, Max Schneider and Jess Kunke for CSSS 592 (Longitudinal Data Analysis).
 
 Here are all the libraries we'll use today.  You can go ahead and install them (if you don't have them) and load them.
 
@@ -54,14 +54,26 @@ So now let's review some skills from yesterday as part of exploring this dataset
 # you can type your code here for 1-3 above!
 ```
 
-Here are some other questions we might want to ask or things we might want to do, and we'll talk today about how to address them using R:
+### More practice
 
-1. Is there any missing data?  If there were, how can we handle that? (We'll just scratch the surface here but it's important to introduce.)
+1. What does `milk$Cow[milk$Diet=="Barley"]` do?
+2. Based on 1, how can you find out for what weeks Cow 3 has data in this dataset?
+3. Can you find another cow that doesn't have data for all 19 weeks?
+
+
+
+## Today's (and future) objectives
+
+Here are some other questions we might want to ask or things we might want to do that we haven't yet discussed how to do; we'll talk about some of these today and in the coming days depending on interest/time.
+
+1. Is there any missing data?  If there is, how can we handle that? (Note: there is a whole field of statistics studying how best to handle missing data in different situations.)
 2. Compute the average protein level at each week across just the cows on a given diet.
 3. Plot cows' milk protein levels over time, grouped by diet, so that we can visually examine whether diet seems to make any difference.
 4. How much variation do we see across cows on a given diet?
 
-## Some intial data cleaning
+(What are some other questions you can think of to ask about this data set?  What else might you want to learn how to do?)
+
+## Reading and reorganizing the data
 
 This data already had a header, and the names are pretty intuitive.  But sometimes one of those is not true for the dataset you're working with, so here is how to rename your variables. First, let's pretend we don't have the header by skipping the first row and setting `header=FALSE`:
 
@@ -75,6 +87,8 @@ colnames(milk)
 colnames(milk) <- c("Diet", "Cow", "Week", "Protein")
 colnames(milk)
 ```
+
+## Exploring and summarizing data with `dplyr`
 
 Suppose we want to see how many observations we have for each diet- is it fairly balanced? Let's see a way to do this using the `dplyr` library.
 
@@ -91,7 +105,7 @@ sum(result1 != result2) # = 0, so the two results are identical
 
 Note that if your line ends with an operator like `+` or `%>%`, or with a comma, then R will expect your line to continue onto the next line; this is nice for splitting long or multi-step commands into multiple lines as you'll see in the next (and other) examples.
 
-So now let's accomplish our objective here:
+So now let's address our question: how many observations we have for each diet- is it fairly balanced?
 
 ```{r num obs by diet}
 n_obs_by_diet <- milk %>%
@@ -111,7 +125,7 @@ We can display this in a table using the `knitr` package (or many other packages
 kable(n_obs_by_diet, caption="Number of observations by diet")
 ```
 
-## Going from long to wide format
+These tools also allow us to tackle one of the problems we posed at the beginning: let's compute the average protein level at each week for each diet.
 
 ```{r avg protein per week per diet}
 avg_protein <- milk %>%
@@ -121,7 +135,9 @@ avg_protein <- milk %>%
 kable(avg_protein, caption="Average protein level by diet and by week")
 ```
 
-Great!  But maybe a better table format would be to have a 19 x 3 table, where each row is a week, each column is a diet, and the values in the table are the average protein values for that week-diet combination. For this, we want to turn this **long-format** table into a **wide-format** table. We'll use the `spread` function from the `tidyr` package. Note that I also display fewer digits here.
+## Converting datasets/tables between long and wide format
+
+Great!  But maybe a better format for the previous table would be a 19 x 3 table, where each row is a week, each column is a diet, and the values in the table are the average protein values for that week-diet combination. For this, we want to turn this **long-format** table (every row is a week-diet combination, so the average protein values are all in one long column) into a **wide-format** table (we break that column into multiple columns according to what diet they're from, making the table wider). We'll use the `spread` function from the `tidyr` package. Note that I also display fewer digits here.
 
 ```{r}
 avg_protein_wide <- avg_protein %>%
@@ -137,11 +153,51 @@ Alternatively, the developers of `tidyr` have also created a replacement for `sp
 
 ```{r}
 avg_protein_wide_2 <- avg_protein %>%
-  # spread takes these arguments:
+  # pivot_wider takes these arguments:
   # names_from=the variable to use for the names of the new columns in wide format,
   # values_from=the current variable/column whose values will be the values in those new columns
   pivot_wider(names_from=Diet, values_from=avg_protein_value)
 ```
+
+What if we have a wide-format dataset and we want to transform it to a long-format dataset? That means we want to gather multiple columns and transform them into one long column. Notice that right now we have four columns: Week, Barley, Lupins, and Mixed. The second through fourth columns are the average protein values for different diets. To make the long format data, we want to replace those three columns with two columns: a `Diet` column equal to "Barley", "Lupins", or "Mixed" (the names of the three columns we currently have), and an `avg_protein_value` column with the values that are currently in the three columns. (Note: here I'm using the same names as in the original long-format table `avg_protein`, but we could instead call them `diet_type` and `avg_prot` or some other intuitive names).
+
+```{r}
+avg_protein_long <- avg_protein_wide %>%
+  # gather takes these arguments:
+  # key = name of the variable to be created
+  # value = name of the variable measured in each column that we're combining (this is going to be the name of the new long column we're making)
+  # the third argument is a vector of columns; see ?select (linked from ?gather) for more details
+  # note that any variable not mentioned will be unchanged
+  gather(key=Diet, value=avg_protein_value, Barley:Mixed) %>%
+  # optional: sort in order by certain columns
+  # here this line is not necessary, but often this is useful
+  arrange(Diet, Week)
+head(avg_protein_long)
+```
+
+Again, you could also use the alternative function called `pivot_longer`:
+
+
+```{r}
+avg_protein_long_2 <- avg_protein_wide %>%
+  # gather takes these arguments:
+  # names_to = name of the variable to be created
+  # values_to = name of the variable measured in each column that we're combining (this is going to be the name of the new long column we're making)
+  # the cols argument is a vector of columns; see ?select (linked from ?gather) for more details
+  # note that any variable not mentioned will be unchanged
+  pivot_longer(cols = Barley:Mixed, names_to="Diet", values_to="avg_protein_value") %>%
+  # optional: sort in order by certain columns
+  # here this line is not necessary, but often this is useful
+  arrange(Diet, Week)
+head(avg_protein_long_2)
+```
+
+### More practice
+
+1. What happens if you change `arrange(Diet, Week)` to `arrange(Week, Diet)`?
+2. What if you replace `gather(key=Diet, value=avg_protein_value, Barley:Mixed)` with `gather(key=Diet, value=avg_protein_value, !Week)`?
+3. What if you replace `gather(key=Diet, value=avg_protein_value, Barley:Mixed)` with `gather(key=Diet, value=avg_protein_value, c(Barley, Mixed))`? Why does this no longer make sense as a table?
+
 
 ## A plot
 
@@ -161,24 +217,30 @@ Let's pick this apart a bit.  Notice that if you just plot the first line with t
 ggplot(data=milk, aes(x=Week, y=Protein, group=Cow, color=Diet))
 ```
 
-So let's store this as a plotting object called `milk_graph` and then add things to it one by one to see what's going on.
+So let's store this as a plotting object called `milk_graph` and then add things to it one by one to see what's going on. Run these lines yourself to see the results.
 
-```{r break it down}
+```{r break it down 1, eval=FALSE}
 # Store the graph so far
 milk_graph <- ggplot(data=milk, aes(x=Week, y=Protein, group=Cow, color=Diet))
 
 # View what it looks like so far- should look the same as the blank plotting region above
 milk_graph
+```
 
+```{r break it down 2, eval=FALSE}
 # Let's add geom_point() - what does it do?
 milk_graph +
   geom_point()
+```
 
+```{r break it down 3, eval=FALSE}
 # What does geom_line() do?
 milk_graph +
     geom_point() +
     geom_line()
+```
 
+```{r break it down 4, eval=FALSE}
 # What does ggtitle() do?
 milk_graph +
     geom_point() +
@@ -221,15 +283,64 @@ milk_graph <- ggplot(data=milk, aes(x=Week, y=Protein, group=Cow, color=Diet)) +
 milk_graph
 ```
 
+### More practice
+
+1. We already computed the average protein level at each week across just the cows on a given diet. Plot this using the tools you learned above. This should give you a plot of average protein level versus week, with just three lines (each a different color, just one line for each diet since you've averaged over all the cows in each diet group).
+2. Try changing some of your plot settings: for example, you might plot just lines, just points, or both; change the theme; or find out how to change the axis labels.
+
+For numbers 3-5, start with the following plot:
+
+```{r}
+# storing the graph to an object -- I can add more layers later!
+milk_graph <- ggplot(data=milk, aes(x=Week, y=Protein, group=Cow, color=Diet)) +
+    geom_line(alpha=0.5) +
+    ggtitle("Protein levels by week for each cow") +
+    theme_bw() +
+    scale_color_manual(values=c("mediumorchid4", "darkgoldenrod1", "deepskyblue"))
+
+milk_graph
+```
+
+3. What does the following code do?
+
+```{r, eval=FALSE}
+milk_graph +
+    facet_grid(. ~ Diet)
+```
+
+4. What does the following code do? How is the result different from the previous question?
+
+```{r, eval=FALSE}
+milk_graph +
+    facet_grid(Diet ~ .)
+```
+
+5. What does the following code do?
+
+```{r, eval=FALSE}
+milk_graph +
+    facet_wrap( ~ Cow, ncol=10)
+```
 
 
 
 
 
 
+## Your turn (breakout rooms)
+
+Work on the "More practice" sections above.  Feel free to ask for further exercises or ask about additional skills.
 
 
-## Your turn
+
+
+## A sample report (and inline code)
+
+For this lab, there were two Rmd files; the other file is called `RLab3-sample-report.Rmd`. Let's check out that file now.  It's meant to be a simple example of a report you could make with this data using R Markdown.  The examples there are also ones we covered here, but you can see an example of formatting a final report in R Markdown to share to someone.
+
+- The code is run but not displayed in the final HTML file.  Sometimes you might want to show select code or all your code depending on what the report is for or who the audience is.  Sometimes you might give them both the HTML/PDF file and the Rmd file; in that case, often you might hide the code in the HTML/PDF and they can refer to the Rmd file if they want to see the details of your analysis.
+- If you give someone your Rmd, they can completely reproduce the file (and your analysis, if you were able to include all the necessary code in the Rmd file).
+- On lines 37 and 61, the sample report shows examples of an R Markdown feature we haven't talked about yet: **inline code**. This can be very nice when you want the body of your text to summarize/report results from your analysis; if you update your code and those numbers change, normally you'd have to keep proofreading to make sure you updated the numbers everywhere they appear in the text. With inline code, R will automatically update those numbers with their new values.
 
 
 

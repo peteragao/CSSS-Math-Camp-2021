@@ -1,0 +1,61 @@
+---
+title: "Math Camp Lab 3 Sample Report"
+author: "Jess Kunke"
+date: "9/14/2021"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+# I like to put my libraries up here so they (1) won't show in the final document and (2) won't print messages
+library(knitr)
+library(dplyr)
+library(tidyr)
+knitr::opts_chunk$set(echo = FALSE) # note that I changed this option
+```
+
+```{r reading in the data}
+# notice how you can name your code chunk. two benefits to that:
+# 1. it's an additional way to comment your code so that you and others
+#    know what your code is doing
+# 2. when you knit the document, the output will show the chunk names.
+#    that way, if it's taking a long time, you can see which chunk is
+#    slowing you down, or if it fails, you know what chunk it was
+#    running when it failed.
+milk <- read.table("milk.csv", header=TRUE, sep=",")
+```
+
+## Data exploration
+
+This data comes from a study in which cows were given different diets and the amount of protein in their milk was measured each week.
+
+```{r}
+ndiets <- length(unique(milk$Diet))
+ncows <- length(unique(milk$Cow))
+nweeks <- length(unique(milk$Week))
+```
+
+There are `r ndiets` diets, `r ncows` cows, and `r nweeks` weeks represented in this data set. The following tables show the number of observations available for each diet and the average amount of protein in the cows' milk by diet and week. I think the second table would be better represented with a plot; I'll send that to you by our next meeting.
+
+```{r num obs by diet}
+n_obs_by_diet <- milk %>%
+  group_by(Diet) %>%
+  summarize(n=n())
+
+kable(n_obs_by_diet, caption="Number of observations by diet")
+```
+
+```{r, message=FALSE}
+avg_protein <- milk %>%
+  group_by(Diet, Week) %>%
+  summarize(avg_protein_value=mean(Protein))
+
+avg_protein_wide <- avg_protein %>%
+    # spread takes these arguments:
+    # key=the variable to use for the names of the new columns in wide format,
+    # value=the current variable/column whose values will be the values in those new columns
+    spread(key=Diet, value=avg_protein_value)
+
+kable(avg_protein_wide, digits=2, caption="Average protein level by diet and by week")
+```
+
+At Week 1, cows on the barley diet had an average protein level of `r round(avg_protein_wide$Barley[1], 2)`, compared to `r round(avg_protein_wide$Lupins[1], 2)` and `r round(avg_protein_wide$Mixed[1], 2)` for cows on the lupins and mixed diets, respectively.

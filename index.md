@@ -68,7 +68,7 @@ Slides and materials will be linked to in the schedule below as they are made av
 **Lab**
 * Tidyverse
 * Plotting basics 
-* [Lab I](https://peteragao.github.io/CSSS-Math-Camp-2021/Labs/RLab3-2021.html) \| [R Markdown](https://raw.githubusercontent.com/peteragao/CSSS-Math-Camp-2021/gh-pages/Labs/RLab3-2021.Rmd) \| [milk.csv](https://peteragao.github.io/CSSS-Math-Camp-2021/Labs/milk.csv) 
+* [Lab](https://peteragao.github.io/CSSS-Math-Camp-2021/Labs/RLab3-2021.html) \| [R Markdown](https://raw.githubusercontent.com/peteragao/CSSS-Math-Camp-2021/gh-pages/Labs/RLab3-2021.Rmd) \| [milk.csv](https://peteragao.github.io/CSSS-Math-Camp-2021/Labs/milk.csv)  \| [Sample Report html](https://peteragao.github.io/CSSS-Math-Camp-2021/Labs/RLab3-sample-report.html) \| [Sample Report Rmd](https://raw.githubusercontent.com/peteragao/CSSS-Math-Camp-2021/gh-pages/Labs/RLab3-sample-report.Rmd)
 
 ## Thursday, September 16
 **Lecture**
