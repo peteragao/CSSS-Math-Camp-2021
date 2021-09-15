@@ -66,9 +66,9 @@ Slides and materials will be linked to in the schedule below as they are made av
 
 
 **Lab**
-* Sampling from an urn
+* Tidyverse
 * Plotting basics 
-* [Lab I](https://peteragao.github.io/CSSS-Math-Camp-2021/Labs/Rlab3.html) \| [R Markdown I](https://peteragao.github.io/CSSS-Math-Camp-2021/Labs/Rlab3.Rmd) \| [Lab II](https://peteragao.github.io/CSSS-Math-Camp-2021/Labs/Rlab4.html) \| [R Markdown II](https://peteragao.github.io/CSSS-Math-Camp-2021/Labs/Rlab4.Rmd)
+* [Lab I](https://peteragao.github.io/CSSS-Math-Camp-2021/Labs/RLab3-2021.html) \| [R Markdown](https://raw.githubusercontent.com/peteragao/CSSS-Math-Camp-2021/gh-pages/Labs/RLab3-2021.Rmd) \| [milk.csv](https://peteragao.github.io/CSSS-Math-Camp-2021/Labs/milk.csv) 
 
 ## Thursday, September 16
 **Lecture**
@@ -86,8 +86,9 @@ Slides and materials will be linked to in the schedule below as they are made av
 
     
 **Lab**
- * Probability distributions
- * Sampling
+* Sampling from an urn
+* Plotting basics 
+* [Lab I](https://peteragao.github.io/CSSS-Math-Camp-2021/Labs/Rlab3.html) \| [R Markdown I](https://peteragao.github.io/CSSS-Math-Camp-2021/Labs/Rlab3.Rmd) \| [Lab II](https://peteragao.github.io/CSSS-Math-Camp-2021/Labs/Rlab4.html) \| [R Markdown II](https://peteragao.github.io/CSSS-Math-Camp-2021/Labs/Rlab4.Rmd)
 
  
 ## Friday, September 17

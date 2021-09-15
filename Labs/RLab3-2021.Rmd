@@ -1,0 +1,237 @@
+---
+title: "Math Camp, Lab 3"
+author: "Jess Kunke"
+date: "9/15/2021"
+output:
+    html_document:
+        toc: true
+        number_sections: false
+---
+
+```{r setup, include=FALSE}
+library(knitr)
+library(dplyr)
+library(tidyr)
+library(ggplot2)
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+This lab draws from materials developed by Rebecca Ferrell, Max Schneider and Jess Kunke for CSSS 592 (Longitudinal Data Analysis).
+
+Here are all the libraries we'll use today.  You can go ahead and install them (if you don't have them) and load them.
+
+```{r libraries, eval=FALSE}
+# if you need to install, e.g., knitr: install.packages("knitr")
+library(knitr) # for making tables
+library(dplyr) # for the pipe operator %>% and the group_by and summarize functions
+library(tidyr) # for the spread function
+library(ggplot2) # for plotting
+```
+
+## Introduction
+
+Today we'll work with a new data set, `milk.csv`, from a study in which cows were given different diets and the amount of protein in their milk was measured each week. Yesterday we worked with data from an R package, but we didn't load data from a file, so here's one of the many ways to do that:
+
+```{r}
+milk <- read.table("milk.csv", header=TRUE, sep=",")
+```
+
+Reviewing some of the programming/R terms we used yesterday, here we've provided three **arguments** to the **function** `read.table`, two of which are **named**:
+
+1. We supplied the first argument as an unnamed argument; it's the filename of the data file we want to read in.
+2. `sep` is the **separator** that delineates one column from another; in a csv (comma-separated value) file, values are separated by commas, so we used `sep=","`.  Other common separators include tabs, a single space, or a semicolon.
+3. If you take a look at the csv file in a text editor or in Excel, you'll see that it has a **header**; it has the names of the columns across the top of the file. We use the `header=TRUE` argument in the `read.table` function to tell R to read that first line as variable names instead of as data.
+    - To test this, try running the line of code with `header=FALSE` instead.)
+    - What is the default option for the `header` argument? (Hint: try `?read.table`.)
+    
+So now let's review some skills from yesterday as part of exploring this dataset.
+
+1. What are the variables/columns in this data set? What types do they have?
+2. How many diets were tested in this study?
+3. Over how many weeks did this study measure protein levels (at least as far as is reflected in this dataset)?
+
+```{r}
+# you can type your code here for 1-3 above!
+```
+
+Here are some other questions we might want to ask or things we might want to do, and we'll talk today about how to address them using R:
+
+1. Is there any missing data?  If there were, how can we handle that? (We'll just scratch the surface here but it's important to introduce.)
+2. Compute the average protein level at each week across just the cows on a given diet.
+3. Plot cows' milk protein levels over time, grouped by diet, so that we can visually examine whether diet seems to make any difference.
+4. How much variation do we see across cows on a given diet?
+
+## Some intial data cleaning
+
+This data already had a header, and the names are pretty intuitive.  But sometimes one of those is not true for the dataset you're working with, so here is how to rename your variables. First, let's pretend we don't have the header by skipping the first row and setting `header=FALSE`:
+
+```{r}
+milk <- read.table("milk.csv", header=FALSE, skip=1, sep=",")
+# check the variable names:
+head(milk)
+colnames(milk)
+# change the variable names
+# note: both colnames() and names() here do the same thing
+colnames(milk) <- c("Diet", "Cow", "Week", "Protein")
+colnames(milk)
+```
+
+Suppose we want to see how many observations we have for each diet- is it fairly balanced? Let's see a way to do this using the `dplyr` library.
+
+`dplyr` is an R package for manipulating data frames. It makes use of a special operator called a "pipe" (`%>%`) which means "take the object on the left and do the command on the right to it". `dplyr` speeds up common operations, especially in data processing on particular variables in a data set. For example, with piping, you don't need to keep retyping the name of a data frame when referencing its columns. This package also contains several useful commands for common data processing tasks.
+
+```{r dplyr intro}
+# first let's see how this pipe works, using the example of the filter function
+result1 <- filter(milk, Diet=="Barley")
+# take a look at result1 here first, then run the next line
+result2 <- milk %>% filter(Diet=="Barley")
+sum(result1 != result2) # = 0, so the two results are identical
+# can also do identical(result1, result2)
+```
+
+Note that if your line ends with an operator like `+` or `%>%`, or with a comma, then R will expect your line to continue onto the next line; this is nice for splitting long or multi-step commands into multiple lines as you'll see in the next (and other) examples.
+
+So now let's accomplish our objective here:
+
+```{r num obs by diet}
+n_obs_by_diet <- milk %>%
+  group_by(Diet) %>%
+  summarize(n=n())
+```
+
+- The `group_by()` function groups the observations by the variable or variables you pass to it. This is like `select()` in that it doesn't alter the data frame, just determines how the data are passed to the next function.
+- The `summarize()` function creates a *new* data frame with the results of evaluating the functions you pass as arguments to `summarize()` for each of the groups you formed previously using `group_by()`. (The documentation at `?summarize()` will show you several of the functions you can pass to it.)
+- Here, the function passed to `summarize()` is `n()`, which computes the number of elements in each of the groups.
+
+Since we group by diet and then summarize using the count function `n()`, the end result is a data frame whose rows are the diets, and each row of which contains the name of the diet and the number of observations for that diet (this includes all weeks, all cows).
+
+We can display this in a table using the `knitr` package (or many other packages). Note: this table is formatted differently in PDF vs HTML knitted documents.
+
+```{r make table}
+kable(n_obs_by_diet, caption="Number of observations by diet")
+```
+
+## Going from long to wide format
+
+```{r avg protein per week per diet}
+avg_protein <- milk %>%
+  group_by(Diet, Week) %>%
+  summarize(avg_protein_value=mean(Protein))
+
+kable(avg_protein, caption="Average protein level by diet and by week")
+```
+
+Great!  But maybe a better table format would be to have a 19 x 3 table, where each row is a week, each column is a diet, and the values in the table are the average protein values for that week-diet combination. For this, we want to turn this **long-format** table into a **wide-format** table. We'll use the `spread` function from the `tidyr` package. Note that I also display fewer digits here.
+
+```{r}
+avg_protein_wide <- avg_protein %>%
+    # spread takes these arguments:
+    # key=the variable to use for the names of the new columns in wide format,
+    # value=the current variable/column whose values will be the values in those new columns
+    spread(key=Diet, value=avg_protein_value)
+
+kable(avg_protein_wide, digits=2, caption="Average protein level by diet and by week")
+```
+
+Alternatively, the developers of `tidyr` have also created a replacement for `spread` called `pivot_wider`. You may find the `pivot_wider` function easier to understand.
+
+```{r}
+avg_protein_wide_2 <- avg_protein %>%
+  # spread takes these arguments:
+  # names_from=the variable to use for the names of the new columns in wide format,
+  # values_from=the current variable/column whose values will be the values in those new columns
+  pivot_wider(names_from=Diet, values_from=avg_protein_value)
+```
+
+## A plot
+
+Let's plot the protein levels (y-axis) by week (x-axis) for each cow (one line per cow), and we can color code the lines based on the cow's diet.
+
+```{r first plot, warning=FALSE, message=FALSE}
+library(ggplot2)
+ggplot(data=milk, aes(x=Week, y=Protein, group=Cow, color=Diet)) +
+    geom_point() +
+    geom_line() +
+    ggtitle("Protein levels by week for each cow")
+```
+
+Let's pick this apart a bit.  Notice that if you just plot the first line with the `ggplot()` command, it doesn't plot anything!  It just sets up the plotting area.
+
+```{r just the first line}
+ggplot(data=milk, aes(x=Week, y=Protein, group=Cow, color=Diet))
+```
+
+So let's store this as a plotting object called `milk_graph` and then add things to it one by one to see what's going on.
+
+```{r break it down}
+# Store the graph so far
+milk_graph <- ggplot(data=milk, aes(x=Week, y=Protein, group=Cow, color=Diet))
+
+# View what it looks like so far- should look the same as the blank plotting region above
+milk_graph
+
+# Let's add geom_point() - what does it do?
+milk_graph +
+  geom_point()
+
+# What does geom_line() do?
+milk_graph +
+    geom_point() +
+    geom_line()
+
+# What does ggtitle() do?
+milk_graph +
+    geom_point() +
+    geom_line() +
+    ggtitle("Protein levels by week for each cow")
+```
+
+In this example, we are using the following:
+
+* Aesthetics (`aes`):
+    - `x`: $x$-axis, our time variable
+    - `y`: $y$-axis, our outcome variable
+    - `group`: our unit variable
+    - `color`: variable we want to use to segment by color
+* Layers (separated by `+`), each of which can take arguments:
+    - `ggplot`: base layer containing information about the data and overall aesthetics
+    - `geom_point`: scatterplot points at $x$ and $y$ values
+    - `geom_line`: line connecting values within each group
+    - `ggtitle`: title for the plot. `xlab` and `ylab` work similarly for labeling the axes if our variable names are not descriptive enough.
+
+Additional aesthetics we can use are `shape` (symbols used for points), `linetype`, `size` (dot size/line thickness), `alpha` (transparency level, 0 for fully transparent and 1 for fully opaque), and `fill` (color for areas like bar charts).
+
+We can change the general appearance of parts of the graph that aren't related to specific variables (e.g. use large sized symbols for the `geom_point` layer). These are passed as non-aesthetic options to the layers; that is, in the specific layer and not enclosed in an `aes()` group in the `ggplot()` main layer.
+
+For more information on modifying colors, legends, etc., see <http://www.cookbook-r.com/Graphs/index.html>. For specific R color names, see <http://www.stat.columbia.edu/~tzheng/files/Rcolor.pdf>. Shapes and linetypes can be modified in a similar way, with more information at <http://www.cookbook-r.com/Graphs/Shapes_and_line_types>.
+
+
+## Perhaps a nicer plot
+
+`ggplot2` gives us tons of options. For example, we can get rid of the points (no `geom_point`), get rid of the gray background (add `theme_bw` layer), and change the colors used (set `scale_color_manual` values).  This is probably the best (cleanest and most useful) of the three plots so far:
+
+```{r another plot, warning=FALSE, message=FALSE}
+# storing the graph to an object -- I can add more layers later!
+milk_graph <- ggplot(data=milk, aes(x=Week, y=Protein, group=Cow, color=Diet)) +
+    geom_line(alpha=0.5) +
+    ggtitle("Protein levels by week for each cow") +
+    theme_bw() +
+    scale_color_manual(values=c("mediumorchid4", "darkgoldenrod1", "deepskyblue"))
+
+milk_graph
+```
+
+
+
+
+
+
+
+
+
+## Your turn
+
+
+
+
+
