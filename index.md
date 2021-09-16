@@ -86,9 +86,8 @@ Slides and materials will be linked to in the schedule below as they are made av
 
     
 **Lab**
-* Sampling from an urn
-* Plotting basics 
-* [Lab I](https://peteragao.github.io/CSSS-Math-Camp-2021/Labs/Rlab3.html) \| [R Markdown I](https://peteragao.github.io/CSSS-Math-Camp-2021/Labs/Rlab3.Rmd) \| [Lab II](https://peteragao.github.io/CSSS-Math-Camp-2021/Labs/Rlab4.html) \| [R Markdown II](https://peteragao.github.io/CSSS-Math-Camp-2021/Labs/Rlab4.Rmd)
+* Sampling/Simulation/Empirical Probability
+*  [Lab](https://peteragao.github.io/CSSS-Math-Camp-2021/Labs/Rlab4-2021.R)
 
  
 ## Friday, September 17
@@ -101,4 +100,10 @@ Slides and materials will be linked to in the schedule below as they are made av
  * [Slides](https://peteragao.github.io/CSSS-Math-Camp-2021/Lectures/Lecture8.pdf) \| [Problem Set](https://peteragao.github.io/CSSS-Math-Camp-2021/ProblemSets/problemset8.pdf) \| [Solutions](https://peteragao.github.io//CSSS-Math-Camp-2021/ProblemSets/solutions8.pdf)
     * [Lecture Video: Uniform and Gaussian ](https://washington.zoom.us/rec/share/F323cE5sUkjbs7u1J3cXwCRklwj-VNKWZGRXwzVVPN8COYial8jTdZGvpC9DLS6S.bKdZJR08JL6LohV0?startTime=1630531304000)
     * [Lecture Video:  Chi Squared and Exponential](https://washington.zoom.us/rec/share/F323cE5sUkjbs7u1J3cXwCRklwj-VNKWZGRXwzVVPN8COYial8jTdZGvpC9DLS6S.bKdZJR08JL6LohV0?startTime=1630532327000)
- * Maximum likelihood estimation
+
+
+**Lab**
+* Sampling from an urn
+* Plotting basics 
+* [Lab I](https://peteragao.github.io/CSSS-Math-Camp-2021/Labs/Rlab3.html) \| [R Markdown I](https://peteragao.github.io/CSSS-Math-Camp-2021/Labs/Rlab3.Rmd) \| [Lab II](https://peteragao.github.io/CSSS-Math-Camp-2021/Labs/Rlab4.html) \| [R Markdown II](https://peteragao.github.io/CSSS-Math-Camp-2021/Labs/Rlab4.Rmd)
+
