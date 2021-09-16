@@ -87,7 +87,7 @@ Slides and materials will be linked to in the schedule below as they are made av
     
 **Lab**
 * Sampling/Simulation/Empirical Probability
-*  [Lab](https://peteragao.github.io/CSSS-Math-Camp-2021/Labs/Rlab4-2021.R)
+*  [Lab](https://peteragao.github.io/CSSS-Math-Camp-2021/Labs/RLab4-2021.R)
 
  
 ## Friday, September 17
