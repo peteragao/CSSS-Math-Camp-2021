@@ -24,10 +24,15 @@ hist(house_prices$bedrooms)
 table(house_prices$bedrooms)
 
 # How would we calculate the empirical probability that a house sold between May 2014-2015 has 3 bedrooms?
+sum(house_prices$bedrooms == 3)
+mean(house_prices$bedrooms == 3)
+
 # How does this compare to the theoretical probability that a house in King County has 3 bedrooms?
 
 # HINT: Try the following line:
 sum(house_prices$bedrooms == 3)
+
+
 
 table(house_prices$bedrooms, house_prices$bathrooms)
 
@@ -38,13 +43,14 @@ table(house_prices$bedrooms, house_prices$bathrooms)
 # EXERCISE 1: How would we calculate the empirical probability that a house sold between May 2014-2015 has 3 bedrooms and 3 bathrooms?
 # HINT: Try the following line:
 sum(house_prices$bedrooms == 3 & house_prices$bathrooms == 3)
-
+mean(house_prices$bedrooms == 3 & house_prices$bathrooms == 3)
 
 # EXERCISE 2: How would we calculate the empirical conditional probability that a house sold between May 2014-2015 
 # has 3 bathrooms GIVEN that it has 3 bedrooms?
 
 
 #### SAMPLING ####
+
 # Let X be the number of bedrooms in a house RANDOMLY DRAWN from our house_prices data
 
 # The sample function lets us draw a random value from a vector. The size = 1 tells R we want to sample 1 house.
@@ -56,7 +62,7 @@ die_roll <- sample(1:6, size = 1)
 die_roll
 
 # What do you think the code below does?
-die_roll_vector <- sample(1:6, size = 6)
+die_roll_vector <- sample(1:6, size = 6, replace = F)
 die_roll_vector
 
 # What do you think the code below does?
@@ -69,10 +75,12 @@ X_vector
 
 # What is the expected value of X?
 E_X <- mean(house_prices$bedrooms)
+E_X
 Var_X <- var(house_prices$bedrooms)
+Var_X
 
 # Let's test using simulation
-X_vector <- sample(house_prices$bedrooms, size = 100, replace = T)
+X_vector <- sample(house_prices$bedrooms, size = 10000, replace = T)
 print(paste("E(X) =", E_X))
 print(paste("Sample mean =", mean(X_vector)))
 print(paste("Var(X) =", Var_X))
@@ -105,3 +113,17 @@ if (COIN == "H") {
 die_roll
 
 # CHALLENGE: What is P(COIN == "H" | die_roll)?
+
+#### FOR LOOPS ####
+rolls <- c()
+for (i in 1:1000) {
+  COIN <- sample(c("H", "T"), 1)
+  if (COIN == "H") {
+    die_roll <- sample(c(1:6), 1)
+  } else {
+    die_roll <- sample(c(1:4), 1)
+  }
+  print(di)
+  rolls[i] <- die_roll
+}
+hist(rolls)
