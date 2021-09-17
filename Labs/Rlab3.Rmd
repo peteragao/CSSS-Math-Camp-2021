@@ -1,6 +1,5 @@
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
-##Bring in R's built-in "iris" dataset
 ```
 
 ## Plotting in R
@@ -26,7 +25,7 @@ The data for this lab can be accessed through a package called `palmerpenguins`,
 
 We will start by examining some descriptive statistics for each variable using the `summary()` command.
 
-```{r iris}
+```{r }
 summary(penguins)
 ```
 
